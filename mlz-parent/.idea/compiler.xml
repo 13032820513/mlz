@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mlz-common" />
+        <module name="mlz-dao" />
+        <module name="mlz-pojo" />
+        <module name="mlz-service" />
+        <module name="mlz-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mlz-common" target="1.8" />
+      <module name="mlz-dao" target="1.8" />
+      <module name="mlz-parent" target="1.8" />
+      <module name="mlz-pojo" target="1.8" />
+      <module name="mlz-service" target="1.8" />
+      <module name="mlz-web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="mlz-common" options="-parameters" />
+      <module name="mlz-dao" options="-parameters" />
+      <module name="mlz-parent" options="-parameters" />
+      <module name="mlz-pojo" options="-parameters" />
+      <module name="mlz-service" options="-parameters" />
+      <module name="mlz-web" options="-parameters" />
+    </option>
+  </component>
+</project>

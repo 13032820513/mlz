@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="mlz-web:war">
+    <output-path>$PROJECT_DIR$/mlz-web/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>mlz-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="mlz-web-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="mlz-web:war exploded" />
+    </root>
+  </artifact>
+</component>

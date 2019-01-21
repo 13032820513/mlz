@@ -1,0 +1,32 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="mlz-web:war exploded">
+    <output-path>$PROJECT_DIR$/mlz-web/target/mlz-web-0.0.1-SNAPSHOT</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>mlz-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="mlz-web" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="mlz-pojo-0.0.1-SNAPSHOT.jar">
+            <element id="module-output" name="mlz-pojo" />
+          </element>
+          <element id="archive" name="mlz-service-0.0.1-SNAPSHOT.jar">
+            <element id="module-output" name="mlz-service" />
+          </element>
+          <element id="library" level="project" name="Maven: com.ibeetl:beetl:{$beetl.version}" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/mlz-web/target/mlz-web-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="mlz-web/web/Web" />
+    </root>
+  </artifact>
+</component>
