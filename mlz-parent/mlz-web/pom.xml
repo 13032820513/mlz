@@ -40,11 +40,12 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/com.ibeetl/beetl -->
+        <!-- https://mvnrepository.com/artifact/com.ibeetl/beetl-framework-starter -->
         <dependency>
             <groupId>com.ibeetl</groupId>
-            <artifactId>beetl</artifactId>
+            <artifactId>beetl-framework-starter</artifactId>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -57,6 +58,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <fork>true</fork>
+                </configuration>
             </plugin>
         </plugins>
     </build>

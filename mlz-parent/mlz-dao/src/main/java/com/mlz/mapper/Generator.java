@@ -45,7 +45,6 @@ public class Generator {
         gc.setAuthor("ZhuJun");
         gc.setOpen(false);
         mpg.setGlobalConfig(gc);
-
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
         dsc.setUrl("jdbc:mysql://localhost:3306/jiaju_shop?useUnicode=true&useSSL=false&characterEncoding=utf8");
