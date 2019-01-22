@@ -1,3 +1,8 @@
 server:
   port: 8090
-
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/jiaju_shop?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver

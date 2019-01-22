@@ -33,7 +33,7 @@
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
         <!-- 添加service和pojo依赖 -->
-        <!--<dependency>
+        <dependency>
             <groupId>com.mlz</groupId>
             <artifactId>mlz-pojo</artifactId>
             <version>0.0.1-SNAPSHOT</version>
@@ -42,7 +42,7 @@
             <groupId>com.mlz</groupId>
             <artifactId>mlz-service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-        </dependency>-->
+        </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.ibeetl/beetl-framework-starter -->
         <dependency>

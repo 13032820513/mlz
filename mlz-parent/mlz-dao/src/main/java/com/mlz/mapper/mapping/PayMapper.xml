@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mlz.mapper.PayMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mlz.entity.Pay">
+        <id column="id" property="id" />
+        <result column="pay_no" property="payNo" />
+        <result column="user_id" property="userId" />
+        <result column="merchant_id" property="merchantId" />
+        <result column="order_id" property="orderId" />
+        <result column="type" property="type" />
+        <result column="total_amount" property="totalAmount" />
+        <result column="total_fax" property="totalFax" />
+        <result column="pay_type" property="payType" />
+        <result column="pay_time" property="payTime" />
+        <result column="pay_account" property="payAccount" />
+        <result column="trade_no" property="tradeNo" />
+        <result column="trade_account" property="tradeAccount" />
+        <result column="status" property="status" />
+        <result column="order_response" property="orderResponse" />
+        <result column="order_callback" property="orderCallback" />
+        <result column="createtime" property="createtime" />
+        <result column="updatetime" property="updatetime" />
+        <result column="deleted" property="deleted" />
+    </resultMap>
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, pay_no, user_id, merchant_id, order_id, type, total_amount, total_fax, pay_type, pay_time, pay_account, trade_no, trade_account, status, order_response, order_callback, createtime, updatetime, deleted
+    </sql>
+
+</mapper>

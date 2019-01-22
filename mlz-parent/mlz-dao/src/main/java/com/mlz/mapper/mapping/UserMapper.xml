@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mlz.mapper.UserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mlz.entity.User">
+        <id column="id" property="id" />
+        <result column="weichat_id" property="weichatId" />
+        <result column="name" property="name" />
+        <result column="sex" property="sex" />
+        <result column="phone" property="phone" />
+        <result column="password" property="password" />
+        <result column="is_web_user" property="isWebUser" />
+        <result column="balance" property="balance" />
+        <result column="province_city_area" property="provinceCityArea" />
+        <result column="province_city_name" property="provinceCityName" />
+        <result column="address" property="address" />
+        <result column="is_invite" property="isInvite" />
+        <result column="status" property="status" />
+        <result column="createtime" property="createtime" />
+        <result column="updatetime" property="updatetime" />
+        <result column="deleted" property="deleted" />
+    </resultMap>
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, weichat_id, name, sex, phone, password, is_web_user, balance, province_city_area, province_city_name, address, is_invite, status, createtime, updatetime, deleted
+    </sql>
+
+</mapper>

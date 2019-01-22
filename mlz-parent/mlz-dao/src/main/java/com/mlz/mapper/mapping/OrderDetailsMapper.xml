@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mlz.mapper.OrderDetailsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mlz.entity.OrderDetails">
+        <id column="id" property="id" />
+        <result column="order_id" property="orderId" />
+        <result column="merchant_id" property="merchantId" />
+        <result column="product_id" property="productId" />
+        <result column="product_name" property="productName" />
+        <result column="num" property="num" />
+        <result column="price" property="price" />
+        <result column="product_attribute" property="productAttribute" />
+        <result column="guarantee_time" property="guaranteeTime" />
+        <result column="createtime" property="createtime" />
+        <result column="updatetime" property="updatetime" />
+        <result column="deleted" property="deleted" />
+    </resultMap>
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, order_id, merchant_id, product_id, product_name, num, price, product_attribute, guarantee_time, createtime, updatetime, deleted
+    </sql>
+
+</mapper>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mlz.mapper.ProductPriceMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mlz.entity.ProductPrice">
+        <id column="id" property="id" />
+        <result column="merchant_id" property="merchantId" />
+        <result column="product_id" property="productId" />
+        <result column="product_name" property="productName" />
+        <result column="last_original_price" property="lastOriginalPrice" />
+        <result column="last_price" property="lastPrice" />
+        <result column="createtime" property="createtime" />
+        <result column="updatetime" property="updatetime" />
+        <result column="deleted" property="deleted" />
+    </resultMap>
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, merchant_id, product_id, product_name, last_original_price, last_price, createtime, updatetime, deleted
+    </sql>
+
+</mapper>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mlz.mapper.MerchantMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mlz.entity.Merchant">
+        <id column="id" property="id" />
+        <result column="merchant_type_ids" property="merchantTypeIds" />
+        <result column="role_id" property="roleId" />
+        <result column="name" property="name" />
+        <result column="phone" property="phone" />
+        <result column="tel" property="tel" />
+        <result column="password" property="password" />
+        <result column="province_city_area" property="provinceCityArea" />
+        <result column="province_city_name" property="provinceCityName" />
+        <result column="address" property="address" />
+        <result column="logo_url" property="logoUrl" />
+        <result column="license_number" property="licenseNumber" />
+        <result column="license_url" property="licenseUrl" />
+        <result column="commission_ratio" property="commissionRatio" />
+        <result column="status" property="status" />
+        <result column="createtime" property="createtime" />
+        <result column="updatetime" property="updatetime" />
+        <result column="deleted" property="deleted" />
+    </resultMap>
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, merchant_type_ids, role_id, name, phone, tel, password, province_city_area, province_city_name, address, logo_url, license_number, license_url, commission_ratio, status, createtime, updatetime, deleted
+    </sql>
+
+</mapper>

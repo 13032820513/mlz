@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mlz.mapper.OrderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mlz.entity.Order">
+        <id column="id" property="id" />
+        <result column="user_id" property="userId" />
+        <result column="merchant_id" property="merchantId" />
+        <result column="on" property="on" />
+        <result column="pay_type" property="payType" />
+        <result column="discount_money" property="discountMoney" />
+        <result column="amount_money" property="amountMoney" />
+        <result column="income_time" property="incomeTime" />
+        <result column="user_address_id" property="userAddressId" />
+        <result column="status" property="status" />
+        <result column="remarks" property="remarks" />
+        <result column="is_wechat_code" property="isWechatCode" />
+        <result column="is_create_qrcode" property="isCreateQrcode" />
+        <result column="createtime" property="createtime" />
+        <result column="updatetime" property="updatetime" />
+        <result column="deleted" property="deleted" />
+    </resultMap>
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, user_id, merchant_id, on, pay_type, discount_money, amount_money, income_time, user_address_id, status, remarks, is_wechat_code, is_create_qrcode, createtime, updatetime, deleted
+    </sql>
+
+</mapper>

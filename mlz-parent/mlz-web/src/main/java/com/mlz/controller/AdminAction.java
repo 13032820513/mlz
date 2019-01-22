@@ -1,10 +1,10 @@
 package com.mlz.controller;
 
 
+import com.mlz.service.impl.AdminServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import java.util.Map;
 
 /**
  * <p>
@@ -15,14 +15,12 @@ import java.util.Map;
  * @since 2019-01-22
  */
 @Controller
-@RequestMapping("/")
+@RequestMapping("/admin")
 public class AdminAction {
+    @Autowired
+    private AdminServiceImpl adminService;
     @RequestMapping("/")
-    public String demoTest(Map<String, Object> model) {
-        model.put("time", 548974561);
-        model.put("name", "obsidian");
-        model.put("qq", "450663584");
-        model.put("message", "测试 Spring Boot 集成 Beetl");
-        return "beetl_demo";
+    public String login() {
+        return "login";
     }
 }

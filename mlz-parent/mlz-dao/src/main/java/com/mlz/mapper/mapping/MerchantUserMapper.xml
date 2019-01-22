@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mlz.mapper.MerchantUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mlz.entity.MerchantUser">
+        <id column="id" property="id" />
+        <result column="merchant_id" property="merchantId" />
+        <result column="pid" property="pid" />
+        <result column="user_id" property="userId" />
+        <result column="name" property="name" />
+        <result column="sex" property="sex" />
+        <result column="province_city_area" property="provinceCityArea" />
+        <result column="province_city_name" property="provinceCityName" />
+        <result column="address" property="address" />
+        <result column="balance" property="balance" />
+        <result column="is_invite" property="isInvite" />
+        <result column="is_web_user" property="isWebUser" />
+        <result column="status" property="status" />
+        <result column="createtime" property="createtime" />
+        <result column="updatetime" property="updatetime" />
+        <result column="deleted" property="deleted" />
+    </resultMap>
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, merchant_id, pid, user_id, name, sex, province_city_area, province_city_name, address, balance, is_invite, is_web_user, status, createtime, updatetime, deleted
+    </sql>
+
+</mapper>

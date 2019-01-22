@@ -2,164 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="955d76af-db73-4b8e-b610-5609f38a49aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/AdminMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/AttributeMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/ConfigMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/FileMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/LabelMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/LoginLogMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/MenuMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/MerchantMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/MerchantTypeMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/MerchantUserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/MerchantWalletMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/OperationLogMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/OrderDetailsMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/OrderMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/PayMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/ProductAttributeMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/ProductMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/ProductPriceMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/ProductTypeMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/ProvincesMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/RelationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/RoleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/SystemMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/UserAddressMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/UserWalletMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/UserWeichatMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/Attribute.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/File.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/Label.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/LoginLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/Merchant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/MerchantType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/MerchantUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/MerchantWallet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/OperationLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/OrderDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/Pay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/ProductAttribute.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/ProductPrice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/ProductType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/Provinces.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/Relation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/System.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/UserAddress.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/UserWallet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/UserWeichat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/AdminService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/AttributeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/ConfigService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/FileService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/LabelService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/LoginLogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/MenuService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/MerchantService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/MerchantTypeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/MerchantUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/MerchantWalletService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/OperationLogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/OrderDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/PayService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/ProductAttributeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/ProductPriceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/ProductTypeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/ProvincesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/RelationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/RoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/SystemService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/UserAddressService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/UserWalletService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/UserWeichatService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/AdminServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/AttributeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/ConfigServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/FileServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/LabelServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/LoginLogServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/MenuServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/MerchantServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/MerchantTypeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/MerchantUserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/MerchantWalletServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/OperationLogServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/OrderDetailsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/PayServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/ProductAttributeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/ProductPriceServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/ProductTypeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/ProvincesServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/RelationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/RoleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/SystemServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/UserAddressServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/UserWalletServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/UserWeichatServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/config/BeetlConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/AdminAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/AttributeAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/ConfigAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/FileAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/LabelAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/LoginLogAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/MenuAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/MerchantAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/MerchantTypeAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/MerchantUserAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/MerchantWalletAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/OperationLogAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/OrderAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/OrderDetailsAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/PayAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/ProductAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/ProductAttributeAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/ProductPriceAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/ProductTypeAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/ProvincesAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/RelationAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/RoleAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/SystemAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/UserAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/UserAddressAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/UserWalletAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/UserWeichatAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/resources/application-local.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/resources/application-produce.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/resources/application-test.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/resources/beetl.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/resources/templates/beetl_demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/AdminMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/AttributeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/ConfigMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/FileMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/LabelMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/LoginLogMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/MenuMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/MerchantMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/MerchantTypeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/MerchantUserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/MerchantWalletMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/OperationLogMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/OrderDetailsMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/OrderMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/PayMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/ProductAttributeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/ProductMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/ProductPriceMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/ProductTypeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/ProvincesMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/RelationMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/RoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/SystemMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/UserAddressMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/UserWalletMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/UserWeichatMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/resources/templates/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/resources/templates/blackboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlz-web/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlz-dao/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mlz-dao/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/util/Generator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/MlzDaoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/MlzDaoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlz-parent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mlz-parent.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlz-pojo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mlz-pojo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/MlzPojoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/MlzPojoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlz-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mlz-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/MlzServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/MlzServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/util/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/util/Generator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlz-dao/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mlz-dao/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/AdminServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mlz-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mlz-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/MlzWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/MlzWebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/com/mlz/config/web/BeetlConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlz-web/src/main/resources/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mlz-web/src/main/resources/banner.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/AdminAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/AdminAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlz-web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mlz-web/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlz-web/src/main/resources/templates/beetl_demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/mlz-web/src/main/resources/templates/login.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -183,28 +63,89 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/config/BeetlConfiguration.java">
+        <entry file="file://$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/MlzDaoApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="38" column="44" lean-forward="true" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mlz-web/src/main/resources/banner.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="73" lean-forward="true" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
+            <state relative-caret-position="80">
+              <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/ibeetl/beetl/2.9.8/beetl-2.9.8-sources.jar!/org/beetl/ext/spring/BeetlSpringViewResolver.java">
+        <entry file="file://$PROJECT_DIR$/mlz-dao/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2561">
-              <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+            <state relative-caret-position="120">
+              <caret line="6" column="44" selection-start-line="2" selection-start-column="2" selection-end-line="6" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mlz-web/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/util/Generator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="90" column="72" selection-start-line="90" selection-start-column="72" selection-end-line="90" selection-end-column="72" />
+              <folding>
+                <element signature="e#2470#2608#0" expanded="true" />
+                <element signature="e#2607#2608#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/AdminMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="10" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/AttributeMapper.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/ConfigMapper.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/LabelMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-generator/3.0.7.1/mybatis-plus-generator-3.0.7.1-sources.jar!/com/baomidou/mybatisplus/generator/AutoGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1038">
+              <caret line="95" column="9" selection-start-line="95" selection-start-column="9" selection-end-line="95" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-generator/3.0.7.1/mybatis-plus-generator-3.0.7.1.jar!/com/baomidou/mybatisplus/generator/config/StrategyConfig.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#22458#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -224,8 +165,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mlz-dao/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/mlz-web/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/com/mlz/config/web/BeetlConfig.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/Generator.java" />
@@ -260,16 +199,20 @@
         <option value="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/ProductAttribute.java" />
         <option value="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/ProductPrice.java" />
         <option value="$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/Admin.java" />
-        <option value="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/AdminService.java" />
         <option value="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/AdminMapper.java" />
-        <option value="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/MlzDaoApplication.java" />
-        <option value="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/AdminServiceImpl.java" />
-        <option value="$PROJECT_DIR$/mlz-web/pom.xml" />
         <option value="$PROJECT_DIR$/mlz-web/src/main/resources/beetl.properties" />
         <option value="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/config/BeetlConfig.java" />
         <option value="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/config/BeetlConfiguration.java" />
-        <option value="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/AdminAction.java" />
         <option value="$PROJECT_DIR$/mlz-web/src/main/resources/banner.txt" />
+        <option value="$PROJECT_DIR$/mlz-web/pom.xml" />
+        <option value="$PROJECT_DIR$/mlz-web/src/main/resources/templates/login.html" />
+        <option value="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/AdminService.java" />
+        <option value="$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/AdminServiceImpl.java" />
+        <option value="$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/AdminAction.java" />
+        <option value="$PROJECT_DIR$/mlz-dao/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/mlz-web/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/MlzDaoApplication.java" />
+        <option value="$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/util/Generator.java" />
       </list>
     </option>
   </component>
@@ -324,8 +267,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -341,47 +282,73 @@
             <path>
               <item name="mlz-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="mlz-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="mlz-web" type="462c0819:PsiDirectoryNode" />
+              <item name="mlz-dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mlz-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="mlz-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="mlz-web" type="462c0819:PsiDirectoryNode" />
+              <item name="mlz-dao" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mlz-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="mlz-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="mlz-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mlz-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mlz-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="mlz-web" type="462c0819:PsiDirectoryNode" />
+              <item name="mlz-dao" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mlz-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="mlz-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="mlz-web" type="462c0819:PsiDirectoryNode" />
+              <item name="mlz-dao" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mlz" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mlz-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="mlz-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="mlz-web" type="462c0819:PsiDirectoryNode" />
+              <item name="mlz-dao" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="mlz" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mlz-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mlz-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="mlz-dao" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mlz" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mlz-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mlz-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="mlz-dao" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mlz-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mlz-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="mlz-web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mlz-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mlz-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="mlz-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mlz-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mlz-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="mlz-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mlz-parent" type="b2602c69:ProjectViewProjectNode" />
@@ -400,75 +367,41 @@
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
               <item name="Maven: com.ibeetl:beetl:2.9.8" type="70bed36:NamedLibraryElementNode" />
             </path>
-            <path>
-              <item name="mlz-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.ibeetl:beetl-framework-starter:1.1.72.RELEASE" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="mlz-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.ibeetl:beetl-framework-starter:1.1.72.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="beetl-framework-starter-1.1.72.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mlz-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.ibeetl:beetl-framework-starter:1.1.72.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="beetl-framework-starter-1.1.72.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="starter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mlz-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.ibeetl:beetlsql:2.10.44" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="mlz-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.ibeetl:beetlsql:2.10.44" type="70bed36:NamedLibraryElementNode" />
-              <item name="beetlsql-2.10.44.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mlz-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.ibeetl:beetlsql:2.10.44" type="70bed36:NamedLibraryElementNode" />
-              <item name="beetlsql-2.10.44.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="sql" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../guns" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\java_projects\mlz\mlz-parent\mlz-pojo\src\main\java\com\mlz\entity" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.mlz" />
       <recent name="com" />
       <recent name="com.mlz.service" />
       <recent name="" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.mlz.config" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\java_projects\mlz\mlz-parent\mlz-dao\src\main\java\com\mlz\mapper\mapping" />
       <recent name="E:\java_projects\mlz\mlz-parent\mlz-web\src\main\resources\templates" />
       <recent name="E:\java_projects\mlz\mlz-parent\mlz-web\src\main\resources" />
       <recent name="E:\java_projects\mlz\mlz-parent\mlz-web\src\main\java\com\mlz\controller" />
       <recent name="E:\java_projects\mlz\mlz-parent\mlz-dao\src\main\java\com\mlz\mapper" />
-      <recent name="E:\java_projects\mlz\mlz-parent\mlz-service\src\main\java\com\mlz\service\impl" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.mlz.config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\java_projects\mlz\mlz-parent\mlz-pojo\src\main\java\com\mlz\entity" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -489,7 +422,7 @@
     </option>
     <option name="contentProportion" value="0.16558442" />
   </component>
-  <component name="RunManager" selected="Spring Boot.MlzWebApplication">
+  <component name="RunManager" selected="Application.Generator">
     <configuration name="Generator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.mlz.util.Generator" />
       <module name="mlz-dao" />
@@ -556,18 +489,19 @@
       <workItem from="1548050652649" duration="5604000" />
       <workItem from="1548062662570" duration="2269000" />
       <workItem from="1548119311599" duration="13818000" />
-      <workItem from="1548141000431" duration="672000" />
+      <workItem from="1548141000431" duration="6222000" />
+      <workItem from="1548148753817" duration="3938000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32487000" />
+    <option name="totallyTimeSpent" value="41975000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49945235" visible="true" weight="0.271855" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49945235" visible="true" weight="0.20735608" />
       <window_info id="Structure" order="1" sideWeight="0.50054765" side_tool="true" weight="0.28730702" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -576,7 +510,7 @@
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32968238" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3264642" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -587,9 +521,9 @@
       <window_info anchor="bottom" id="Spring" order="10" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.3286334" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32858709" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" />
-      <window_info anchor="bottom" id="Run Dashboard" order="15" visible="true" weight="0.5195228" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.5195228" />
       <window_info anchor="bottom" id="Problems" order="16" weight="0.329718" />
       <window_info anchor="bottom" id="Thumbnails" order="17" weight="0.329718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -606,121 +540,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/util/Generator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mlz-common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="24" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mlz-dao/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mlz-pojo/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/Attribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="16" selection-start-line="16" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/File.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/Label.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-annotation/3.0.7.1/mybatis-plus-annotation-3.0.7.1-sources.jar!/com/baomidou/mybatisplus/annotation/TableName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/UserWeichat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/UserWallet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/UserAddress.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/System.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/Relation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mlz-pojo/src/main/java/com/mlz/entity/Provinces.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -877,58 +696,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mlz-web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="48" column="41" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/AdminMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/MlzDaoApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/AdminService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/config/BeetlConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="23" column="57" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/config/BeetlConfig.java" />
     <entry file="file://$PROJECT_DIR$/mlz-web/src/main/resources/beetl.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/AdminServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="62" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -942,41 +714,180 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mlz-web/src/main/resources/templates/beetl_demo.html">
+    <entry file="file://$PROJECT_DIR$/mlz-web/src/main/resources/banner.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="6" lean-forward="true" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        <state relative-caret-position="100">
+          <caret line="5" column="73" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/AdminAction.java">
+    <entry file="file://$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/config/BeetlConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mlz-web/src/main/resources/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mlz-web/src/main/resources/templates/404.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
-          <caret line="22" column="38" lean-forward="true" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+          <caret line="22" column="41" lean-forward="true" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/ibeetl/beetl/2.9.8/beetl-2.9.8-sources.jar!/org/beetl/ext/spring/BeetlSpringViewResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2108">
+          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mlz-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="42" column="48" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.0.7.1/mybatis-plus-extension-3.0.7.1-sources.jar!/com/baomidou/mybatisplus/extension/service/IService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/impl/AdminServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/ibeetl/beetl/2.9.8/beetl-2.9.8-sources.jar!/org/beetl/ext/spring/BeetlSpringViewResolver.java">
+    <entry file="file://$PROJECT_DIR$/mlz-service/src/main/java/com/mlz/service/AdminService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2561">
-          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+        <state relative-caret-position="240">
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/config/BeetlConfiguration.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-generator/3.0.7.1/mybatis-plus-generator-3.0.7.1-sources.jar!/com/baomidou/mybatisplus/generator/config/GlobalConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="38" column="44" lean-forward="true" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+        <state relative-caret-position="1540">
+          <caret line="95" column="19" selection-start-line="95" selection-start-column="19" selection-end-line="95" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mlz-web/src/main/resources/banner.txt">
+    <entry file="file://$PROJECT_DIR$/mlz-web/src/main/java/com/mlz/controller/AdminAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="73" lean-forward="true" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
+        <state relative-caret-position="340">
+          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/AdminMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/FileMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/ProvincesMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mlz-dao/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="44" selection-start-line="2" selection-start-column="2" selection-end-line="6" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/MlzDaoApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mlz-web/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-generator/3.0.7.1/mybatis-plus-generator-3.0.7.1-sources.jar!/com/baomidou/mybatisplus/generator/engine/BeetlTemplateEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-generator/3.0.7.1/mybatis-plus-generator-3.0.7.1.jar!/com/baomidou/mybatisplus/generator/config/StrategyConfig.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#22458#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-generator/3.0.7.1/mybatis-plus-generator-3.0.7.1-sources.jar!/com/baomidou/mybatisplus/generator/config/StrategyConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="204" column="17" lean-forward="true" selection-start-line="204" selection-start-column="17" selection-end-line="204" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-generator/3.0.7.1/mybatis-plus-generator-3.0.7.1-sources.jar!/com/baomidou/mybatisplus/generator/AutoGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1038">
+          <caret line="95" column="9" selection-start-line="95" selection-start-column="9" selection-end-line="95" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/AdminMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="10" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/AttributeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/ConfigMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/mapper/mapping/LabelMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mlz-dao/src/main/java/com/mlz/util/Generator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="90" column="72" selection-start-line="90" selection-start-column="72" selection-end-line="90" selection-end-column="72" />
+          <folding>
+            <element signature="e#2470#2608#0" expanded="true" />
+            <element signature="e#2607#2608#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mlz.mapper.UserWeichatMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mlz.entity.UserWeichat">
+        <id column="id" property="id" />
+        <result column="openid" property="openid" />
+        <result column="nickname" property="nickname" />
+        <result column="sex" property="sex" />
+        <result column="province" property="province" />
+        <result column="city" property="city" />
+        <result column="country" property="country" />
+        <result column="headimgurl" property="headimgurl" />
+        <result column="unionid" property="unionid" />
+        <result column="subscribe" property="subscribe" />
+        <result column="createtime" property="createtime" />
+        <result column="updatetime" property="updatetime" />
+        <result column="deleted" property="deleted" />
+    </resultMap>
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, openid, nickname, sex, province, city, country, headimgurl, unionid, subscribe, createtime, updatetime, deleted
+    </sql>
+
+</mapper>

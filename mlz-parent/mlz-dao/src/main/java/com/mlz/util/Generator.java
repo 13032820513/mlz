@@ -1,11 +1,16 @@
 package com.mlz.util;
 
 import com.baomidou.mybatisplus.annotation.DbType;
+import com.baomidou.mybatisplus.core.toolkit.StringPool;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.InjectionConfig;
 import com.baomidou.mybatisplus.generator.config.*;
+import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.BeetlTemplateEngine;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Generator {
     public static void main(String[] args) {
@@ -15,13 +20,14 @@ public class Generator {
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
         String projectPath = System.getProperty("user.dir");
-        gc.setOutputDir(projectPath + "/src/main/java");
+        gc.setOutputDir(projectPath + "/generate");
         gc.setAuthor("ZhuJun");
+        gc.setOpen(false);
         gc.setFileOverride(true);
         gc.setActiveRecord(false);
         gc.setEnableCache(false); // XML二级缓存
         gc.setBaseResultMap(true);// XML ResultMap
-        gc.setBaseColumnList(false);// XML columList
+        gc.setBaseColumnList(true);// XML columList
 
 
         // 自定义文件命名，注意 %s 会自动填充表实体属性！
@@ -46,14 +52,21 @@ public class Generator {
         PackageConfig pc = new PackageConfig();
         pc.setParent("com.mlz");
         pc.setMapper("mapper");
-        pc.setXml("xml");
+        pc.setXml("mapper.mapping");
         pc.setController("controller");
         pc.setEntity("entity");
         pc.setService("service");
-        pc.setServiceImpl("serviceImpl");
-        pc.setXml("xml");
+        pc.setServiceImpl("service.impl");
 
         mpg.setPackageInfo(pc);
+
+
+        // 如果模板引擎是 freemarker
+        //String templatePath = "/templates/mapper.xml.ftl";
+        // 如果模板引擎是 Beetl
+//        String templatePath = "/templates/mapper.xml.btl";
+        // 如果模板引擎是 velocity
+        // String templatePath = "/templates/mapper.xml.vm";
 
         // 自定义配置
         InjectionConfig cfg = new InjectionConfig() {
@@ -65,25 +78,24 @@ public class Generator {
 
         // 如果模板引擎是 freemarker
         //String templatePath = "/templates/mapper.xml.ftl";
-        // 如果模板引擎是 Beetl
-//        String templatePath = "/templates/mapper.xml.btl";
         // 如果模板引擎是 velocity
-        // String templatePath = "/templates/mapper.xml.vm";
+        String templatePath = "/templates/mapper.xml.btl";
 
-             // 自定义输出配置
-        /*List<FileOutConfig> focList = new ArrayList<>();
+        // 自定义输出配置
+        List<FileOutConfig> focList = new ArrayList<>();
         // 自定义配置会被优先输出
         focList.add(new FileOutConfig(templatePath) {
             @Override
             public String outputFile(TableInfo tableInfo) {
                 // 自定义输出文件名
-                return projectPath + "/src/main/resources/mapper/" + pc.getModuleName()
+                return projectPath + "/generate/com/mlz/mapper/mapping/"
                         + "/" + tableInfo.getEntityName() + "Mapper" + StringPool.DOT_XML;
             }
         });
 
         cfg.setFileOutConfigList(focList);
-        mpg.setCfg(cfg);*/
+        mpg.setCfg(cfg);
+
 
         // 配置模板
         TemplateConfig templateConfig = new TemplateConfig();
@@ -95,6 +107,7 @@ public class Generator {
 
         templateConfig.setXml(null);
         mpg.setTemplate(templateConfig);
+
 
         // 策略配置
         StrategyConfig strategy = new StrategyConfig();
