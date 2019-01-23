@@ -6,32 +6,26 @@ import org.beetl.ext.spring.BeetlSpringViewResolver;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.io.DefaultResourceLoader;
-import org.springframework.core.io.support.ResourcePatternResolver;
-import org.springframework.core.io.support.ResourcePatternUtils;
 
 /**
  * Beetl配置
- * @author Obsidian
+ * @author Zhujun
  *
  */
 @Configuration
-public class BeetlConfiguration {
-	
-	
-	@Bean(initMethod = "init", name = "beetlConfig")
+public class BeetlConf {
+
+    @Bean(name = "beetlConfig")
     public BeetlGroupUtilConfiguration getBeetlGroupUtilConfiguration() {
         BeetlGroupUtilConfiguration beetlGroupUtilConfiguration = new BeetlGroupUtilConfiguration();
         ClasspathResourceLoader classpathResourceLoader = new ClasspathResourceLoader();
         beetlGroupUtilConfiguration.setResourceLoader(classpathResourceLoader);
-        ResourcePatternResolver patternResolver = ResourcePatternUtils.getResourcePatternResolver(new DefaultResourceLoader());
-        //读取配置文件信息
-        beetlGroupUtilConfiguration.setConfigFileResource(patternResolver.getResource("classpath:beetl.properties"));
+        beetlGroupUtilConfiguration.init();
         return beetlGroupUtilConfiguration;
     }
-
     @Bean(name = "beetlViewResolver")
-    public BeetlSpringViewResolver getBeetlSpringViewResolver(@Qualifier("beetlConfig") BeetlGroupUtilConfiguration beetlGroupUtilConfiguration) {
+    public BeetlSpringViewResolver getBeetlSpringViewResolver(
+            @Qualifier("beetlConfig") BeetlGroupUtilConfiguration beetlGroupUtilConfiguration) {
         BeetlSpringViewResolver beetlSpringViewResolver = new BeetlSpringViewResolver();
         beetlSpringViewResolver.setPrefix("/templates/");
         beetlSpringViewResolver.setSuffix(".html");

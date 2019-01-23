@@ -3,8 +3,8 @@ package com.mlz.controller;
 
 import com.mlz.service.impl.AdminServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
@@ -14,13 +14,15 @@ import org.springframework.web.bind.annotation.RestController;
  * @author ZhuJun
  * @since 2019-01-22
  */
-@RestController
+@Controller
 @RequestMapping("/admin")
 public class AdminAction {
     @Autowired
     private AdminServiceImpl adminService;
     @RequestMapping("/login")
     public String login() {
-        return adminService.getAdminById(1).toString();
+        adminService.getAdminById(1).toString();
+        return "login" ;
     }
+
 }

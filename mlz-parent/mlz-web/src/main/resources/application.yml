@@ -11,3 +11,6 @@ spring:
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Mapper.xml
   type-aliases-package: com.mlz.entity
+
+beetl:
+  templatesPath=/templates:
