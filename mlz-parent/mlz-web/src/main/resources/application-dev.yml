@@ -1,17 +1,16 @@
+server:
+  port: 8090
 spring:
+  profiles:
+    active: dev
   datasource:
-    url: jdbc:mysql://172.17.119.19:3306/guns?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=CTT
+    url: jdbc:mysql://localhost:3306/jiaju_shop?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
     username: root
-    password: root
-    filters: wall,mergeStat
-
-#多数据源情况的配置
-guns:
-  muti-datasource:
-    open: false
-    url: jdbc:mysql://127.0.0.1:3306/guns_test?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=CTT
-    username: root
-    password: root
-    dataSourceNames:
-    - dataSourceGuns
-    - dataSourceBiz
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+#查看自动配置项
+debug: false

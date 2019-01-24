@@ -15,14 +15,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @since 2019-01-22
  */
 @Controller
-@RequestMapping("/admin")
 public class AdminAction {
     @Autowired
     private AdminServiceImpl adminService;
     @RequestMapping("/login")
     public String login() {
-        adminService.getAdminById(1).toString();
-        return "login" ;
+        System.out.println(adminService.getAdminById(1).toString());
+        return "login.html" ;
+    }
+
+
+    @RequestMapping("/index")
+    public String index(){
+        return "index";
     }
 
 }
