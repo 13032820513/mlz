@@ -4,15 +4,13 @@ spring:
     active: dev
   mvc:
     static-path-pattern: static/**
+    view:
+      prefix: "templates/"
 
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Mapper.xml
   type-aliases-package: com.mlz.entity
 
-# spring boot 集成beetl配置项
-beetl:
-  enabled: true
-  templatesPath: templates
-  suffix: html
+
 logging:
   file: log/mlz.log

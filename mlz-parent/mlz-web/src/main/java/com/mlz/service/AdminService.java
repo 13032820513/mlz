@@ -13,4 +13,6 @@ import com.mlz.entity.Admin;
  */
 public interface AdminService extends IService<Admin> {
 
+
+    Admin checkPassword(Admin admin);
 }

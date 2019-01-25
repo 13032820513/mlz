@@ -1,9 +1,11 @@
 package com.mlz.controller;
 
 
+import com.mlz.entity.Admin;
 import com.mlz.service.impl.AdminServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -18,15 +20,32 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AdminAction {
     @Autowired
     private AdminServiceImpl adminService;
-    @RequestMapping("/login")
+    /** 
+    * @Description: 跟路径跳转到登陆页面
+    * @Param: [] 
+    * @return: java.lang.String 
+    * @Author: Mr.Zhu 
+    * @Date: 2019/1/25 
+    */ 
+    @RequestMapping("/")
     public String login() {
-        System.out.println(adminService.getAdminById(1).toString());
         return "login.html" ;
     }
 
-
-    @RequestMapping("/index")
-    public String index(){
+    /** 
+    * @Description: 用户密码检验和登陆
+    * @Param: [admin, model] 
+    * @return: java.lang.String 
+    * @Author: Mr.Zhu 
+    * @Date: 2019/1/25 
+    */ 
+    @RequestMapping("/login")
+    public String index(Admin admin, Model model){
+        admin = adminService.checkPassword(admin);
+        if (admin == null){
+            return "redirect:/";
+        }
+        model.addAttribute(admin);
         return "index";
     }
 
