@@ -23,11 +23,13 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     @Resource
     private AdminMapper adminMapper;
 
-
-    public Admin getAdminById(int id){
-        return adminMapper.selectById(id);
-    }
-
+    /**
+    * @Description:   校验密码进行登陆
+    * @Param: [admin]
+    * @return: com.mlz.entity.Admin
+    * @Author: Mr.Zhu
+    * @Date: 2019/1/28
+    */
     @Override
     public Admin checkPassword(Admin admin) {
         String account = admin.getAccount();

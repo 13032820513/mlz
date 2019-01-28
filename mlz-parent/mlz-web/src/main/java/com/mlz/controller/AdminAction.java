@@ -29,7 +29,7 @@ public class AdminAction {
     */ 
     @RequestMapping("/")
     public String login() {
-        return "login.html" ;
+        return "login" ;
     }
 
     /** 

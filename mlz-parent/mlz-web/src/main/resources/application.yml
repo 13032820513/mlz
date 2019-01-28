@@ -5,7 +5,8 @@ spring:
   mvc:
     static-path-pattern: static/**
     view:
-      prefix: "templates/"
+      prefix: templates/
+      suffix: .html
 
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Mapper.xml
@@ -14,3 +15,7 @@ mybatis-plus:
 
 logging:
   file: log/mlz.log
+server:
+  servlet:
+    context-path: /
+
