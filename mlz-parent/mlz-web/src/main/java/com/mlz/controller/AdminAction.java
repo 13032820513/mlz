@@ -39,7 +39,7 @@ public class AdminAction {
     * @Author: Mr.Zhu 
     * @Date: 2019/1/25 
     */ 
-    @RequestMapping("/login")
+    @RequestMapping("/index")
     public String index(Admin admin, Model model){
         admin = adminService.checkPassword(admin);
         if (admin == null){
@@ -47,6 +47,12 @@ public class AdminAction {
         }
         model.addAttribute(admin);
         return "index";
+    }
+    @RequestMapping("index/info")
+    public String info(Admin admin, Model model){
+
+        model.addAttribute("name","zhujun");
+        return "info";
     }
 
 }

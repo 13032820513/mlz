@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
 
@@ -8,11 +8,11 @@
     
 
     <title>登陆-美丽宅管理平台</title>
-    <link rel="shortcut icon" href="favicon.ico">
-    <link href="${ctxPath}/css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
-    <link href="${ctxPath}/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
-    <link href="${ctxPath}static/css/animate.min.css" rel="stylesheet">
-    <link href="${ctxPath}static/css/style.min.css?v=4.0.0" rel="stylesheet"><base target="_blank">
+    <link rel="shortcut icon" href="${staticPath}/images/favicon.ico">
+    <link href="${staticPath}/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${staticPath}/css/font-awesome.min.css" rel="stylesheet">
+    <link href="${staticPath}/css/animate.min.css" rel="stylesheet">
+    <link href="${staticPath}/css/style.min.css" rel="stylesheet"><base target="_blank">
     <!--[if lt IE 8]>
     <meta http-equiv="refresh" content="0;ie.html" />
     <![endif]-->
@@ -24,7 +24,7 @@
     <div class="middle-box text-center loginscreen  animated fadeInDown">
         <div>
             <h2 style="margin-top: 20rem;font-weight: 700">美丽宅管理系统</h2>
-            <form class="m-t" role="form" action="/login" method="post" target="_self">
+            <form class="m-t" role="form" action="${ctxPath}/index" method="post" target="_self">
                 <div class="form-group">
                     <input type="input" class="form-control" name="account" placeholder="用户名" required="" >
                 </div>
@@ -35,8 +35,7 @@
             </form>
         </div>
     </div>
-    <script src="${ctxPath}/js/jquery.min.js?v=2.1.4"></script>
-    <script src="${ctxPath}/js/bootstrap.min.js?v=3.3.5"></script>
+    <script src="${staticPath}/js/jquery.min.js"></script>
+    <script src="${staticPath}/js/bootstrap.min.js"></script>
 </body>
-
 </html>
