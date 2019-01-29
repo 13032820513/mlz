@@ -1,0 +1,59 @@
+<!--左侧导航开始  菜单栏+个人信息栏-->
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="nav-close"><i class="fa fa-times-circle"></i>
+    </div>
+    <div class="sidebar-collapse">
+        <ul class="nav" id="side-menu">
+            <!-- 个人信息栏 -->
+            <li class="nav-header">
+                <div class="dropdown profile-element">
+                    <span><img alt="image" class="img-circle" src="${staticPath}/img/a2.jpg" width="60" /></span>
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear">
+                               <span class="block m-t-xs"><strong class="font-bold">${admin.account}</strong></span>
+                                <span class="text-muted text-xs block">角色 ${admin.roleId}<b class="caret"></b></span>
+                                </span>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                        <li><a class="J_menuItem" href="profile.html">个人资料${admin.id}</a></li>
+                        <li><a class="J_menuItem" href="mailbox.html">邮箱${admin.email}}</a></li>
+                        <li class="divider"></li>
+                        <li><a href="${ctxPath}/logout">安全退出</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="logo-element">H+</div>
+            </li>
+            <!--主页菜单-->
+            <li>
+                <a class="J_menuItem" href="#"><i class="fa fa-home"></i></i> <span class="nav-label">主页</span></a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa fa-bar-chart-o"></i>
+                    <span class="nav-label">统计图表</span>
+                    <span class="fa arrow"></span>
+                </a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a class="J_menuItem" href="graph_echarts.html">百度ECharts</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">信箱 </span><span class="label label-warning pull-right">16</span></a>
+                <ul class="nav nav-second-level">
+                    <li><a class="J_menuItem" href="mailbox.html">收件箱</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">表单</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li><a class="J_menuItem" href="form_basic.html">基本表单</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--左侧导航结束-->

@@ -45,9 +45,11 @@ public class AdminAction {
         if (admin == null){
             return "redirect:/";
         }
-        model.addAttribute(admin);
+        model.addAttribute("admin", admin);
         return "index";
     }
+
+
     @RequestMapping("index/info")
     public String info(Admin admin, Model model){
 
