@@ -87,12 +87,9 @@
         </div>
         <a href="${ctxPath}/logout" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i> 退出</a>
     </div>
-
-    <!-- 中间主体内容 -->
-
-    <div class="row J_mainContent" id="content-main">
-        ${layoutContent}
-    </div>
+    <!--中间主体内容-->
+    <% include("_content.html"){} %>
+    <!--页脚版权信息-->
     <% include("_footer.html"){} %>
 </div>
 <!--右侧部分结束-->

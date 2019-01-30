@@ -1,6 +1,8 @@
 package com.mlz.controller;
 
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.mlz.entity.Admin;
 import com.mlz.service.impl.AdminServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,11 +51,20 @@ public class AdminAction {
         return "index";
     }
 
-
-    @RequestMapping("index/info")
-    public String info(Admin admin, Model model){
-        model.addAttribute("name","zhujun");
-        return "info";
+    /**
+    * @Description:  管理员用户列表
+    * @Param: [model]
+    * @return: java.lang.String
+    * @Author: Mr.Zhu
+    * @Date: 2019/1/30
+    */
+    @RequestMapping("/admin/index")
+    public String adminIndex(Model model){
+        Page<Admin> page = new Page<>();
+        IPage<Admin> admins = adminService.page(page);
+        model.addAttribute("admins",admins);
+        System.out.println(admins);
+        return "admin/index";
     }
 
 }
