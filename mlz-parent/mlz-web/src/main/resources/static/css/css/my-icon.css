@@ -1,0 +1,24 @@
+@font-face {
+    font-family: MuiiconSpread;
+    font-weight: normal;
+    font-style: normal;
+    src:  url('../fonts/my-icon.ttf') format('truetype'); /* iOS 4.1- */
+}
+.my-icon
+{
+    font-family: MuiiconSpread;
+    font-size: 22px !important;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    display: inline-block;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+.my-icon-user1:before { content: "\e600"; }
+.my-icon-user2:before { content: "\e601"; }
+.my-icon-user3:before { content: "\e602"; }
+.my-icon-user4:before { content: "\e640"; }
+.my-icon-user5:before { content: "\e65e"; }
+.my-icon-user6:before { content: "\e62d"; }
