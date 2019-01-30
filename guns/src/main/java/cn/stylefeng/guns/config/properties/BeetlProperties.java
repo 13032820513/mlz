@@ -18,7 +18,6 @@ package cn.stylefeng.guns.config.properties;
 import cn.stylefeng.roses.core.util.ToolUtil;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.Properties;
@@ -29,7 +28,7 @@ import java.util.Properties;
  * @author fengshuonan
  * @date 2017-05-24 20:37
  */
-
+@Configuration
 @ConfigurationProperties(prefix = BeetlProperties.BEETLCONF_PREFIX)
 public class BeetlProperties {
 

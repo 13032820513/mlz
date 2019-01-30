@@ -20,6 +20,6 @@ public class BeetlGlobalExt implements WebRenderExt {
     @Override
     public void modify(Template template, GroupTemplate gt, HttpServletRequest request, HttpServletResponse response) {
         // 静态资源路径
-        template.binding("staticPath",request.getContextPath() + STATIC_PATH);
+        template.binding("staticPath",  request.getContextPath() + STATIC_PATH);
     }
 }

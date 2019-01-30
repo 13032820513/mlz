@@ -18,7 +18,7 @@ public class BeetlProperties {
     // Beetl属性安全配置的前缀
     public static final String BEETLCONF_PREFIX = "beetl";
     public static final String TEMPLATES_PATH = "/templates";
-    public static final String STATIC_PATH = "static";
+    public static final String STATIC_PATH = "/static";
     // 占位符前缀
     private String delimiterStatementStart;
     // 占位符后缀

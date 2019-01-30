@@ -52,7 +52,6 @@ public class AdminAction {
 
     @RequestMapping("index/info")
     public String info(Admin admin, Model model){
-
         model.addAttribute("name","zhujun");
         return "info";
     }

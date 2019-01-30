@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>首页-美丽宅管理系统</title>
+    <!--[if lt IE 8]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+    <link rel="shortcut icon" href="${staticPath}/images/favicon.ico">
+    <link href="${staticPath}/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${staticPath}/css/font-awesome.min.css" rel="stylesheet">
+    <link href="${staticPath}/css/animate.min.css" rel="stylesheet">
+    <link href="${staticPath}/css/style.min.css" rel="stylesheet">
+</head>
+
+<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+<div id="wrapper">
+    <!-- 左边个人信息和菜单 -->
+    <% include("_sidebar.html"){} %>
+
+    <!-- 右边部分的头，中间内容，右上角弹框，页脚版权信息 -->
+    <% include("_header.html"){} %>
+
+    <!-- 聊天弹窗 -->
+    <% include("_chat.html"){} %>
+
+</div>
+<!--<script src="${staticPath}/js/jquery.min.js"></script>
+<script src="${staticPath}/js/bootstrap.min.js"></script>
+<script src="${staticPath}/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="${staticPath}/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="${staticPath}/js/plugins/layer/layer.min.js"></script>
+<script src="${staticPath}/js/hplus.min.js"></script>
+<script src="${staticPath}/js/contabs.min.js"></script>
+<script src="${staticPath}/js/plugins/pace/pace.min.js"></script>-->
+
+<script src="${ctxPath}/static/js/jquery.min.js"></script>
+<script src="${ctxPath}/static/js/bootstrap.min.js"></script>
+<script src="${ctxPath}/static/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="${ctxPath}/static/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="${ctxPath}/static/js/plugins/layer/layer.min.js"></script>
+<script src="${ctxPath}/static/js/hplus.min.js"></script>
+<script src="${ctxPath}/static/js/contabs.min.js"></script>
+<script src="${ctxPath}/static/js/plugins/pace/pace.min.js"></script>
+
+</body>
+
+</html>
