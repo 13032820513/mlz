@@ -12,7 +12,7 @@
 		this.pictureId = pictureId;
 		this.uploadBtnId = pictureId + "BtnId";
 		this.uploadPreId = pictureId + "PreId";
-		this.uploadUrl = Feng.ctxPath + '/merchant/upload';
+		this.uploadUrl = Feng.ctxPath + '/mgr/upload';
 		this.fileSizeLimit = 100 * 1024 * 1024;
 		this.picWidth = 800;
 		this.picHeight = 800;
@@ -85,17 +85,11 @@
 			bindedObj.on('uploadSuccess', function(file,response) {
 				Feng.success("上传成功");
 				$("#" + me.pictureId).val(response);
-                setTimeout(function (args) {
-                    $(".progress").addClass("hidden");
-				},3000)
 			});
 
 			// 文件上传失败，显示上传出错。
 			bindedObj.on('uploadError', function(file) {
 				Feng.error("上传失败");
-				setTimeout(function (args) {
-                    $(".progress").addClass("hidden");
-                },3000)
 			});
 
 			// 其他错误

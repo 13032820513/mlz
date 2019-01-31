@@ -5,7 +5,7 @@
  *
  */
 (function () {
-    var BSTable = function (bstableId, url, columns,queryParam) {
+    var BSTable = function (bstableId, url, columns) {
         this.btInstance = null;					//jquery和BootStrapTable绑定的对象
         this.bstableId = bstableId;
         this.url = Feng.ctxPath + url;
@@ -15,7 +15,7 @@
         this.columns = columns;
         this.height = 665;						//默认表格高度665
         this.data = {};
-        this.queryParams = queryParam != null ? queryParam:{}; // 向后台传递的自定义参数
+        this.queryParams = {}; // 向后台传递的自定义参数
     };
 
     BSTable.prototype = {
@@ -36,6 +36,7 @@
                     toolbar: "#" + this.toolbarId,//顶部工具条
                     striped: true,     			//是否显示行间隔色
                     cache: false,      			//是否使用缓存,默认为true
+                    pagination: true,     		//是否显示分页（*）
                     sortable: true,      		//是否启用排序
                     sortOrder: "desc",     		//排序方式
                     pageNumber: 1,      			//初始化加载第一页，默认第一页
@@ -51,7 +52,7 @@
                     showColumns: true,     		//是否显示所有的列
                     showRefresh: true,     		//是否显示刷新按钮
                     minimumCountColumns: 2,    	//最少允许的列数
-                    clickToSelect: this.queryParams.clickToSelect != null ? this.queryParams.clickToSelect:true,    	//是否启用点击选中行
+                    clickToSelect: true,    	//是否启用点击选中行
                     searchOnEnterKey: true,		//设置为 true时，按回车触发搜索方法，否则自动触发搜索方法
                     columns: this.columns,		//列数组
                     pagination: true,			//是否显示分页条

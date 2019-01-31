@@ -2089,7 +2089,6 @@ table.dataTable thead .sorting:after {
 
 .i-checks {
     padding-left: 0;
-    display: inline-block;
 }
 
 .form-control,
@@ -7896,74 +7895,4 @@ body.skin-3 {
 .tab-menu-selected {
     background-color: #293846 !important;
     color: white !important;
-}
-
-/*属性*/
-.attr-box-div{
-    border: 1px dashed gray;
-    margin-bottom:40px;
-}
-.attr-margin-top{
-    margin-top: 10px;
-}
-.attr-margin-left i{
-    opacity: 0 !important;
-}
-.attr_img_file{
-    opacity: 0;
-    /*margin-top: -25px;*/
-    /*display: none;*/
-    position: absolute !important;
-    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-    clip: rect(1px,1px,1px,1px);
-}
-.attr-margin-left{
-    margin-left: 10px !important;
-    /*width: 60px;*/
-    /*height: 60px;*/
-    /*padding-left: 0px;*/
-    /*text-align: center;*/
-    /*background-color: #0C0C0C;*/
-    /*margin-top: 22px;*/
-}
-.attr_img_div{
-    /*margin-left: 20px !important;*/
-    margin-left: 10px;
-    position: relative;
-    width: 60px;
-    height: 60px;
-    padding-left: 0px;
-    text-align: center;
-    background-color: #0C0C0C;
-    margin-top: 12px;
-}
-
-.attr-img{
-    cursor: pointer;
-    /*max-width:60px;*/
-    /*max-height:60px;*/
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-}
-.attr_img_div i{
-    background-image: url("../img/search_plus.png");
-    display: block;
-    position: absolute;
-    vertical-align: middle;
-    height: 20px;
-    width: 20px;
-    right: -25px;
-    bottom: -10px;
-    cursor: pointer;
-    opacity: 1 !important;
-}
-.attr-button-position{
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
 }

@@ -86,15 +86,7 @@
 			var zTree = $.fn.zTree.getZTreeObj(this.id);
 			var nodes = zTree.getSelectedNodes();
 			return nodes[0].name;
-		},
-        /**
-         * 获取选中的值
-         */
-        getSelectedAddressVal : function(){
-            var zTree = $.fn.zTree.getZTreeObj(this.id);
-            var nodes = zTree.getSelectedNodes();
-            return nodes[0].address;
-        }
+		}
 	};
 
 	window.$ZTree = $ZTree;

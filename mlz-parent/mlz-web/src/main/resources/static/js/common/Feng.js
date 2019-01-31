@@ -1,7 +1,5 @@
 var Feng = {
     ctxPath: "",
-    imgFileSize: 10,//文件大小限制 单位 MB
-    imgFileNum: 10,//商品能够上传几张图片
     addCtx: function (ctx) {
         if (this.ctxPath == "") {
             this.ctxPath = ctx;
@@ -74,14 +72,14 @@ var Feng = {
             }
         };
 
-        if (leftOffset == undefined && rightOffset == undefined) {
+        if(leftOffset == undefined && rightOffset == undefined){
             var inputDiv = $("#" + inputId);
             var inputDivOffset = $("#" + inputId).offset();
             $("#" + inputTreeContentId).css({
                 left: inputDivOffset.left + "px",
                 top: inputDivOffset.top + inputDiv.outerHeight() + "px"
             }).slideDown("fast");
-        } else {
+        }else{
             $("#" + inputTreeContentId).css({
                 left: leftOffset + "px",
                 top: rightOffset + "px"
@@ -128,7 +126,7 @@ var Feng = {
             }
         });
     },
-    initValidator: function (formId, fields) {
+    initValidator: function(formId,fields){
         $('#' + formId).bootstrapValidator({
             feedbackIcons: {
                 valid: 'glyphicon glyphicon-ok',
@@ -147,84 +145,5 @@ var Feng = {
         }
         var result = strArr.join('');
         return result.charAt(0).toUpperCase() + result.substring(1);
-    },
-    dataURLtoFile: function (dataurl, filename) {//将base64转换为文件
-        var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
-            bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
-        while (n--) {
-            u8arr[n] = bstr.charCodeAt(n);
-        }
-        return new File([u8arr], filename, {type: mime});
-    },
-    imagePreview:function (img) {
-        var w = $(img)[0].naturalWidth;
-        var h = $(img)[0].naturalHeight;
-        var src = $(img).attr("src");
-        parent.layer.open({
-            type:1
-            ,title:false
-            ,closeBtn:0
-            ,offset:'auto'
-            ,area:[w + 'px', h + 'px']
-            ,shadeClose:true
-            ,content:'<img src="'+src+'" >'
-            ,scrollbar:false
-            ,fixed:false
-        });
-    },
-    compressImage: function (file, isWebupload,callback) {
-        var reader = new FileReader();
-        var maxWidth = 2000;
-        var fileName = file.name.substring(0, file.name.lastIndexOf("."));
-        reader.onload = function (ev) {
-            var img = new Image();
-            img.onload = function () {
-                // 不要超出最大宽度
-                var w = Math.min(maxWidth, img.width);
-                // 高度按比例计算
-                var h = img.height * (w / img.width);
-                var canvas = document.createElement('canvas');
-                var ctx = canvas.getContext('2d');
-                // 设置 canvas 的宽度和高度
-                canvas.width = w;
-                canvas.height = h;
-                ctx.fillStyle = "#fff";
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
-                ctx.drawImage(img, 0, 0, w, h);
-                var fileSize = file.size;
-                //设置图片压缩比例
-                var qualify = 1;
-                if (fileSize < 50) {
-                    qualify = 1;
-                } else if (fileSize > 1024) {
-                    qualify = 0.5;
-                } else {
-                    qualify = 0.6
-                }
-                // var base64 = canvas.toDataURL(fileType, qualify);
-                var base64 = canvas.toDataURL("image/jpeg", qualify);
-                var toFile = Feng.dataURLtoFile(base64, fileName + ".jpeg");
-                // file = new WebUploader.File(toFile);
-                file.name = toFile.name;
-                file.size = toFile.size;
-                if (isWebupload === true) {
-                    file.source.name = toFile.name;
-                    file.source.size = toFile.size;
-                    file.source.source = toFile;
-                }else{
-                    callback(toFile);
-                }
-                // var strLen = base64.length;
-                // console.log(toFile)
-                // console.log("图片类型为" + file.type + "图片的初始size=" + fileSize + "压缩比例为=" + qualify + "压缩后的大小为=" + (strLen - (strLen / 8) * 2));
-                // img.remove();
-            };
-            img.src = ev.target.result;
-        };
-        if (isWebupload === true) {
-            reader.readAsDataURL(file.source.source);
-        }else{
-            reader.readAsDataURL(file);
-        }
     }
 };

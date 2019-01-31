@@ -73,15 +73,11 @@
 					hasSelectItem = true;
 					var td = $('<td style="text-align:center;width:36px"></td>');
 					if(column.radio){
-                        var _ipt= "";
-                        if(item[options.id] != undefined)
-						_ipt = $('<input name="select_item" type="radio" value="'+item[options.id]+'"></input>');
+						var _ipt = $('<input name="select_item" type="radio" value="'+item[options.id]+'"></input>');
 						td.append(_ipt);
 					} 
 					if(column.checkbox){
-                        var _ipt= "";
-                        if(item[options.id] != undefined)
-						 _ipt = $('<input name="select_item" type="checkbox" value="'+item[options.id]+'"></input>');
+						var _ipt = $('<input name="select_item" type="checkbox" value="'+item[options.id]+'"></input>');
 						td.append(_ipt);
 					}
 					tr.append(td);

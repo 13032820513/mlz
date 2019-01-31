@@ -113,8 +113,6 @@ $(function () {
             flag = true;
         if (dataUrl == undefined || $.trim(dataUrl).length == 0)return false;
 
-        $(".J_menuItem_li").dropdown('toggle');
-
         // 选项卡菜单已存在
         $('.J_menuTab').each(function () {
             if ($(this).data('id') == dataUrl) {
