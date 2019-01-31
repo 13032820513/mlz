@@ -17,7 +17,13 @@ mybatis-plus:
 
 
 logging:
-  file: log/mlz.log
+  file: /runtime/log/mlz.log
+  level:
+    com:
+      mlz:
+        mapper: debug
+
+
 server:
   servlet:
     context-path: /
