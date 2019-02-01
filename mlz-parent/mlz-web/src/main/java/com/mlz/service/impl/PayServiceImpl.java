@@ -1,7 +1,7 @@
 package com.mlz.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.mlz.entity.Pay;
+import com.mlz.entity.pojo.Pay;
 import com.mlz.mapper.PayMapper;
 import com.mlz.service.PayService;
 import org.springframework.stereotype.Service;

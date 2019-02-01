@@ -1,7 +1,7 @@
 package com.mlz.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.mlz.entity.UserWeichat;
+import com.mlz.entity.pojo.UserWeichat;
 import com.mlz.mapper.UserWeichatMapper;
 import com.mlz.service.UserWeichatService;
 import org.springframework.stereotype.Service;

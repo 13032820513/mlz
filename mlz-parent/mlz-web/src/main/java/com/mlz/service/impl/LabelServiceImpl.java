@@ -1,7 +1,7 @@
 package com.mlz.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.mlz.entity.Label;
+import com.mlz.entity.pojo.Label;
 import com.mlz.mapper.LabelMapper;
 import com.mlz.service.LabelService;
 import org.springframework.stereotype.Service;

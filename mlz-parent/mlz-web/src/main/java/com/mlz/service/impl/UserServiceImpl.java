@@ -1,7 +1,7 @@
 package com.mlz.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.mlz.entity.User;
+import com.mlz.entity.pojo.User;
 import com.mlz.mapper.UserMapper;
 import com.mlz.service.UserService;
 import org.springframework.stereotype.Service;

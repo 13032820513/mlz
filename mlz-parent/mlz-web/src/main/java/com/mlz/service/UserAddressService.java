@@ -1,7 +1,7 @@
 package com.mlz.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.mlz.entity.UserAddress;
+import com.mlz.entity.pojo.UserAddress;
 
 /**
  * <p>

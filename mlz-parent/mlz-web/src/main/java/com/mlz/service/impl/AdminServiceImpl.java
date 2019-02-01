@@ -2,7 +2,8 @@ package com.mlz.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.mlz.entity.Admin;
+import com.mlz.config.security.SysUser;
+import com.mlz.entity.pojo.Admin;
 import com.mlz.mapper.AdminMapper;
 import com.mlz.service.AdminService;
 import com.mlz.util.Md5Util;
@@ -26,7 +27,7 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     /**
     * @Description:   校验密码进行登陆
     * @Param: [admin]
-    * @return: com.mlz.entity.Admin
+    * @return: com.mlz.entity.pojo.Admin
     * @Author: Mr.Zhu
     * @Date: 2019/1/28
     */
@@ -39,5 +40,10 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
         wrapper.eq("password", Md5Util.getMd5String(password));
         admin = this.getOne(wrapper);
         return admin == null? null:admin;
+    }
+
+    @Override
+    public SysUser getAdminAndRoleByName(String username) {
+        return null;
     }
 }

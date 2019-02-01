@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mlz.mapper.OrderMapper">
+  <resultMap id="BaseResultMap" type="com.mlz.entity.pojo.Order">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="merchant_id" jdbcType="INTEGER" property="merchantId" />
+    <result column="on" jdbcType="VARCHAR" property="on" />
+    <result column="pay_type" jdbcType="TINYINT" property="payType" />
+    <result column="discount_money" jdbcType="DECIMAL" property="discountMoney" />
+    <result column="amount_money" jdbcType="DECIMAL" property="amountMoney" />
+    <result column="income_time" jdbcType="TIMESTAMP" property="incomeTime" />
+    <result column="user_address_id" jdbcType="INTEGER" property="userAddressId" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="remarks" jdbcType="VARCHAR" property="remarks" />
+    <result column="is_wechat_code" jdbcType="TINYINT" property="isWechatCode" />
+    <result column="is_create_qrcode" jdbcType="TINYINT" property="isCreateQrcode" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="updatetime" jdbcType="TIMESTAMP" property="updatetime" />
+    <result column="deleted" jdbcType="BIT" property="deleted" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, user_id, merchant_id, on, pay_type, discount_money, amount_money, income_time, 
+    user_address_id, status, remarks, is_wechat_code, is_create_qrcode, createtime, updatetime, 
+    deleted
+  </sql>
+  <select id="selectByExample" parameterType="com.mlz.entity.pojo.OrderExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from jia_order
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from jia_order
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from jia_order
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.mlz.entity.pojo.OrderExample">
+    delete from jia_order
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.mlz.entity.pojo.Order">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into jia_order (user_id, merchant_id, on, 
+      pay_type, discount_money, amount_money, 
+      income_time, user_address_id, status, 
+      remarks, is_wechat_code, is_create_qrcode, 
+      createtime, updatetime, deleted
+      )
+    values (#{userId,jdbcType=INTEGER}, #{merchantId,jdbcType=INTEGER}, #{on,jdbcType=VARCHAR}, 
+      #{payType,jdbcType=TINYINT}, #{discountMoney,jdbcType=DECIMAL}, #{amountMoney,jdbcType=DECIMAL}, 
+      #{incomeTime,jdbcType=TIMESTAMP}, #{userAddressId,jdbcType=INTEGER}, #{status,jdbcType=TINYINT}, 
+      #{remarks,jdbcType=VARCHAR}, #{isWechatCode,jdbcType=TINYINT}, #{isCreateQrcode,jdbcType=TINYINT}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}, #{deleted,jdbcType=BIT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.mlz.entity.pojo.Order">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into jia_order
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="merchantId != null">
+        merchant_id,
+      </if>
+      <if test="on != null">
+        on,
+      </if>
+      <if test="payType != null">
+        pay_type,
+      </if>
+      <if test="discountMoney != null">
+        discount_money,
+      </if>
+      <if test="amountMoney != null">
+        amount_money,
+      </if>
+      <if test="incomeTime != null">
+        income_time,
+      </if>
+      <if test="userAddressId != null">
+        user_address_id,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="remarks != null">
+        remarks,
+      </if>
+      <if test="isWechatCode != null">
+        is_wechat_code,
+      </if>
+      <if test="isCreateQrcode != null">
+        is_create_qrcode,
+      </if>
+      <if test="createtime != null">
+        createtime,
+      </if>
+      <if test="updatetime != null">
+        updatetime,
+      </if>
+      <if test="deleted != null">
+        deleted,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="merchantId != null">
+        #{merchantId,jdbcType=INTEGER},
+      </if>
+      <if test="on != null">
+        #{on,jdbcType=VARCHAR},
+      </if>
+      <if test="payType != null">
+        #{payType,jdbcType=TINYINT},
+      </if>
+      <if test="discountMoney != null">
+        #{discountMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="amountMoney != null">
+        #{amountMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="incomeTime != null">
+        #{incomeTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userAddressId != null">
+        #{userAddressId,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="remarks != null">
+        #{remarks,jdbcType=VARCHAR},
+      </if>
+      <if test="isWechatCode != null">
+        #{isWechatCode,jdbcType=TINYINT},
+      </if>
+      <if test="isCreateQrcode != null">
+        #{isCreateQrcode,jdbcType=TINYINT},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleted != null">
+        #{deleted,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.mlz.entity.pojo.OrderExample" resultType="java.lang.Long">
+    select count(*) from jia_order
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update jia_order
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.userId != null">
+        user_id = #{record.userId,jdbcType=INTEGER},
+      </if>
+      <if test="record.merchantId != null">
+        merchant_id = #{record.merchantId,jdbcType=INTEGER},
+      </if>
+      <if test="record.on != null">
+        on = #{record.on,jdbcType=VARCHAR},
+      </if>
+      <if test="record.payType != null">
+        pay_type = #{record.payType,jdbcType=TINYINT},
+      </if>
+      <if test="record.discountMoney != null">
+        discount_money = #{record.discountMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="record.amountMoney != null">
+        amount_money = #{record.amountMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="record.incomeTime != null">
+        income_time = #{record.incomeTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.userAddressId != null">
+        user_address_id = #{record.userAddressId,jdbcType=INTEGER},
+      </if>
+      <if test="record.status != null">
+        status = #{record.status,jdbcType=TINYINT},
+      </if>
+      <if test="record.remarks != null">
+        remarks = #{record.remarks,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isWechatCode != null">
+        is_wechat_code = #{record.isWechatCode,jdbcType=TINYINT},
+      </if>
+      <if test="record.isCreateQrcode != null">
+        is_create_qrcode = #{record.isCreateQrcode,jdbcType=TINYINT},
+      </if>
+      <if test="record.createtime != null">
+        createtime = #{record.createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updatetime != null">
+        updatetime = #{record.updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.deleted != null">
+        deleted = #{record.deleted,jdbcType=BIT},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update jia_order
+    set id = #{record.id,jdbcType=INTEGER},
+      user_id = #{record.userId,jdbcType=INTEGER},
+      merchant_id = #{record.merchantId,jdbcType=INTEGER},
+      on = #{record.on,jdbcType=VARCHAR},
+      pay_type = #{record.payType,jdbcType=TINYINT},
+      discount_money = #{record.discountMoney,jdbcType=DECIMAL},
+      amount_money = #{record.amountMoney,jdbcType=DECIMAL},
+      income_time = #{record.incomeTime,jdbcType=TIMESTAMP},
+      user_address_id = #{record.userAddressId,jdbcType=INTEGER},
+      status = #{record.status,jdbcType=TINYINT},
+      remarks = #{record.remarks,jdbcType=VARCHAR},
+      is_wechat_code = #{record.isWechatCode,jdbcType=TINYINT},
+      is_create_qrcode = #{record.isCreateQrcode,jdbcType=TINYINT},
+      createtime = #{record.createtime,jdbcType=TIMESTAMP},
+      updatetime = #{record.updatetime,jdbcType=TIMESTAMP},
+      deleted = #{record.deleted,jdbcType=BIT}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.mlz.entity.pojo.Order">
+    update jia_order
+    <set>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="merchantId != null">
+        merchant_id = #{merchantId,jdbcType=INTEGER},
+      </if>
+      <if test="on != null">
+        on = #{on,jdbcType=VARCHAR},
+      </if>
+      <if test="payType != null">
+        pay_type = #{payType,jdbcType=TINYINT},
+      </if>
+      <if test="discountMoney != null">
+        discount_money = #{discountMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="amountMoney != null">
+        amount_money = #{amountMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="incomeTime != null">
+        income_time = #{incomeTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userAddressId != null">
+        user_address_id = #{userAddressId,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=TINYINT},
+      </if>
+      <if test="remarks != null">
+        remarks = #{remarks,jdbcType=VARCHAR},
+      </if>
+      <if test="isWechatCode != null">
+        is_wechat_code = #{isWechatCode,jdbcType=TINYINT},
+      </if>
+      <if test="isCreateQrcode != null">
+        is_create_qrcode = #{isCreateQrcode,jdbcType=TINYINT},
+      </if>
+      <if test="createtime != null">
+        createtime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        updatetime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleted != null">
+        deleted = #{deleted,jdbcType=BIT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.mlz.entity.pojo.Order">
+    update jia_order
+    set user_id = #{userId,jdbcType=INTEGER},
+      merchant_id = #{merchantId,jdbcType=INTEGER},
+      on = #{on,jdbcType=VARCHAR},
+      pay_type = #{payType,jdbcType=TINYINT},
+      discount_money = #{discountMoney,jdbcType=DECIMAL},
+      amount_money = #{amountMoney,jdbcType=DECIMAL},
+      income_time = #{incomeTime,jdbcType=TIMESTAMP},
+      user_address_id = #{userAddressId,jdbcType=INTEGER},
+      status = #{status,jdbcType=TINYINT},
+      remarks = #{remarks,jdbcType=VARCHAR},
+      is_wechat_code = #{isWechatCode,jdbcType=TINYINT},
+      is_create_qrcode = #{isCreateQrcode,jdbcType=TINYINT},
+      createtime = #{createtime,jdbcType=TIMESTAMP},
+      updatetime = #{updatetime,jdbcType=TIMESTAMP},
+      deleted = #{deleted,jdbcType=BIT}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

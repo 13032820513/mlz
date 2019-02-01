@@ -1,6 +1,6 @@
 package com.mlz.mapper;
 
-import com.mlz.entity.User;
+import com.mlz.entity.pojo.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

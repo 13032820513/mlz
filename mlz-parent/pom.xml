@@ -19,6 +19,7 @@
     <modules>
         <module>mlz-web</module>
         <module>mlz-common</module>
+        <module>generator</module>
     </modules>
 
     <properties>

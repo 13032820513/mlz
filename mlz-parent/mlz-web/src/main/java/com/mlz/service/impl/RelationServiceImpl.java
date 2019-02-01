@@ -1,7 +1,7 @@
 package com.mlz.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.mlz.entity.Relation;
+import com.mlz.entity.pojo.Relation;
 import com.mlz.mapper.RelationMapper;
 import com.mlz.service.RelationService;
 import org.springframework.stereotype.Service;

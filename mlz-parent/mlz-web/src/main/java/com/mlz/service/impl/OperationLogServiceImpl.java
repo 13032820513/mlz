@@ -1,7 +1,7 @@
 package com.mlz.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.mlz.entity.OperationLog;
+import com.mlz.entity.pojo.OperationLog;
 import com.mlz.mapper.OperationLogMapper;
 import com.mlz.service.OperationLogService;
 import org.springframework.stereotype.Service;

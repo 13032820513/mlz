@@ -1,6 +1,6 @@
 package com.mlz.mapper;
 
-import com.mlz.entity.ProductAttribute;
+import com.mlz.entity.pojo.ProductAttribute;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

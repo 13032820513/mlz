@@ -1,7 +1,7 @@
 package com.mlz.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.mlz.entity.UserAddress;
+import com.mlz.entity.pojo.UserAddress;
 import com.mlz.mapper.UserAddressMapper;
 import com.mlz.service.UserAddressService;
 import org.springframework.stereotype.Service;

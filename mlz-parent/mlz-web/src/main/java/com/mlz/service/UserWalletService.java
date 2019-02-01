@@ -1,7 +1,7 @@
 package com.mlz.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.mlz.entity.UserWallet;
+import com.mlz.entity.pojo.UserWallet;
 
 /**
  * <p>

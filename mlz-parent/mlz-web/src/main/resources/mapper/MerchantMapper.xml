@@ -1,31 +1,416 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.mlz.mapper.MerchantMapper">
-
-    <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.mlz.entity.Merchant">
-        <id column="id" property="id" />
-        <result column="merchant_type_ids" property="merchantTypeIds" />
-        <result column="role_id" property="roleId" />
-        <result column="name" property="name" />
-        <result column="phone" property="phone" />
-        <result column="tel" property="tel" />
-        <result column="password" property="password" />
-        <result column="province_city_area" property="provinceCityArea" />
-        <result column="province_city_name" property="provinceCityName" />
-        <result column="address" property="address" />
-        <result column="logo_url" property="logoUrl" />
-        <result column="license_number" property="licenseNumber" />
-        <result column="license_url" property="licenseUrl" />
-        <result column="commission_ratio" property="commissionRatio" />
-        <result column="status" property="status" />
-        <result column="createtime" property="createtime" />
-        <result column="updatetime" property="updatetime" />
-        <result column="deleted" property="deleted" />
-    </resultMap>
-    <!-- 通用查询结果列 -->
-    <sql id="Base_Column_List">
-        id, merchant_type_ids, role_id, name, phone, tel, password, province_city_area, province_city_name, address, logo_url, license_number, license_url, commission_ratio, status, createtime, updatetime, deleted
-    </sql>
-
+<mapper namespace="com.mlz.dao.MerchantMapper">
+  <resultMap id="BaseResultMap" type="com.mlz.entity.pojo.Merchant">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="merchant_type_ids" jdbcType="VARCHAR" property="merchantTypeIds" />
+    <result column="role_id" jdbcType="INTEGER" property="roleId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="tel" jdbcType="VARCHAR" property="tel" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="province_city_area" jdbcType="VARCHAR" property="provinceCityArea" />
+    <result column="province_city_name" jdbcType="VARCHAR" property="provinceCityName" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="logo_url" jdbcType="VARCHAR" property="logoUrl" />
+    <result column="license_number" jdbcType="VARCHAR" property="licenseNumber" />
+    <result column="license_url" jdbcType="VARCHAR" property="licenseUrl" />
+    <result column="commission_ratio" jdbcType="DOUBLE" property="commissionRatio" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="updatetime" jdbcType="TIMESTAMP" property="updatetime" />
+    <result column="deleted" jdbcType="BIT" property="deleted" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, merchant_type_ids, role_id, name, phone, tel, password, province_city_area, province_city_name, 
+    address, logo_url, license_number, license_url, commission_ratio, status, createtime, 
+    updatetime, deleted
+  </sql>
+  <select id="selectByExample" parameterType="com.mlz.entity.pojo.MerchantExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from jia_merchant
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from jia_merchant
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from jia_merchant
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.mlz.entity.pojo.MerchantExample">
+    delete from jia_merchant
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.mlz.entity.pojo.Merchant">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into jia_merchant (merchant_type_ids, role_id, name, 
+      phone, tel, password, 
+      province_city_area, province_city_name, address, 
+      logo_url, license_number, license_url, 
+      commission_ratio, status, createtime, 
+      updatetime, deleted)
+    values (#{merchantTypeIds,jdbcType=VARCHAR}, #{roleId,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, 
+      #{phone,jdbcType=VARCHAR}, #{tel,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{provinceCityArea,jdbcType=VARCHAR}, #{provinceCityName,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
+      #{logoUrl,jdbcType=VARCHAR}, #{licenseNumber,jdbcType=VARCHAR}, #{licenseUrl,jdbcType=VARCHAR}, 
+      #{commissionRatio,jdbcType=DOUBLE}, #{status,jdbcType=TINYINT}, #{createtime,jdbcType=TIMESTAMP}, 
+      #{updatetime,jdbcType=TIMESTAMP}, #{deleted,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.mlz.entity.pojo.Merchant">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into jia_merchant
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="merchantTypeIds != null">
+        merchant_type_ids,
+      </if>
+      <if test="roleId != null">
+        role_id,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="phone != null">
+        phone,
+      </if>
+      <if test="tel != null">
+        tel,
+      </if>
+      <if test="password != null">
+        password,
+      </if>
+      <if test="provinceCityArea != null">
+        province_city_area,
+      </if>
+      <if test="provinceCityName != null">
+        province_city_name,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+      <if test="logoUrl != null">
+        logo_url,
+      </if>
+      <if test="licenseNumber != null">
+        license_number,
+      </if>
+      <if test="licenseUrl != null">
+        license_url,
+      </if>
+      <if test="commissionRatio != null">
+        commission_ratio,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="createtime != null">
+        createtime,
+      </if>
+      <if test="updatetime != null">
+        updatetime,
+      </if>
+      <if test="deleted != null">
+        deleted,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="merchantTypeIds != null">
+        #{merchantTypeIds,jdbcType=VARCHAR},
+      </if>
+      <if test="roleId != null">
+        #{roleId,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="tel != null">
+        #{tel,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="provinceCityArea != null">
+        #{provinceCityArea,jdbcType=VARCHAR},
+      </if>
+      <if test="provinceCityName != null">
+        #{provinceCityName,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="logoUrl != null">
+        #{logoUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseNumber != null">
+        #{licenseNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseUrl != null">
+        #{licenseUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="commissionRatio != null">
+        #{commissionRatio,jdbcType=DOUBLE},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleted != null">
+        #{deleted,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.mlz.entity.pojo.MerchantExample" resultType="java.lang.Long">
+    select count(*) from jia_merchant
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update jia_merchant
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.merchantTypeIds != null">
+        merchant_type_ids = #{record.merchantTypeIds,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roleId != null">
+        role_id = #{record.roleId,jdbcType=INTEGER},
+      </if>
+      <if test="record.name != null">
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.phone != null">
+        phone = #{record.phone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tel != null">
+        tel = #{record.tel,jdbcType=VARCHAR},
+      </if>
+      <if test="record.password != null">
+        password = #{record.password,jdbcType=VARCHAR},
+      </if>
+      <if test="record.provinceCityArea != null">
+        province_city_area = #{record.provinceCityArea,jdbcType=VARCHAR},
+      </if>
+      <if test="record.provinceCityName != null">
+        province_city_name = #{record.provinceCityName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.address != null">
+        address = #{record.address,jdbcType=VARCHAR},
+      </if>
+      <if test="record.logoUrl != null">
+        logo_url = #{record.logoUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.licenseNumber != null">
+        license_number = #{record.licenseNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.licenseUrl != null">
+        license_url = #{record.licenseUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.commissionRatio != null">
+        commission_ratio = #{record.commissionRatio,jdbcType=DOUBLE},
+      </if>
+      <if test="record.status != null">
+        status = #{record.status,jdbcType=TINYINT},
+      </if>
+      <if test="record.createtime != null">
+        createtime = #{record.createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updatetime != null">
+        updatetime = #{record.updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.deleted != null">
+        deleted = #{record.deleted,jdbcType=BIT},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update jia_merchant
+    set id = #{record.id,jdbcType=INTEGER},
+      merchant_type_ids = #{record.merchantTypeIds,jdbcType=VARCHAR},
+      role_id = #{record.roleId,jdbcType=INTEGER},
+      name = #{record.name,jdbcType=VARCHAR},
+      phone = #{record.phone,jdbcType=VARCHAR},
+      tel = #{record.tel,jdbcType=VARCHAR},
+      password = #{record.password,jdbcType=VARCHAR},
+      province_city_area = #{record.provinceCityArea,jdbcType=VARCHAR},
+      province_city_name = #{record.provinceCityName,jdbcType=VARCHAR},
+      address = #{record.address,jdbcType=VARCHAR},
+      logo_url = #{record.logoUrl,jdbcType=VARCHAR},
+      license_number = #{record.licenseNumber,jdbcType=VARCHAR},
+      license_url = #{record.licenseUrl,jdbcType=VARCHAR},
+      commission_ratio = #{record.commissionRatio,jdbcType=DOUBLE},
+      status = #{record.status,jdbcType=TINYINT},
+      createtime = #{record.createtime,jdbcType=TIMESTAMP},
+      updatetime = #{record.updatetime,jdbcType=TIMESTAMP},
+      deleted = #{record.deleted,jdbcType=BIT}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.mlz.entity.pojo.Merchant">
+    update jia_merchant
+    <set>
+      <if test="merchantTypeIds != null">
+        merchant_type_ids = #{merchantTypeIds,jdbcType=VARCHAR},
+      </if>
+      <if test="roleId != null">
+        role_id = #{roleId,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="tel != null">
+        tel = #{tel,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="provinceCityArea != null">
+        province_city_area = #{provinceCityArea,jdbcType=VARCHAR},
+      </if>
+      <if test="provinceCityName != null">
+        province_city_name = #{provinceCityName,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="logoUrl != null">
+        logo_url = #{logoUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseNumber != null">
+        license_number = #{licenseNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseUrl != null">
+        license_url = #{licenseUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="commissionRatio != null">
+        commission_ratio = #{commissionRatio,jdbcType=DOUBLE},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=TINYINT},
+      </if>
+      <if test="createtime != null">
+        createtime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        updatetime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleted != null">
+        deleted = #{deleted,jdbcType=BIT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.mlz.entity.pojo.Merchant">
+    update jia_merchant
+    set merchant_type_ids = #{merchantTypeIds,jdbcType=VARCHAR},
+      role_id = #{roleId,jdbcType=INTEGER},
+      name = #{name,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      tel = #{tel,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      province_city_area = #{provinceCityArea,jdbcType=VARCHAR},
+      province_city_name = #{provinceCityName,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      logo_url = #{logoUrl,jdbcType=VARCHAR},
+      license_number = #{licenseNumber,jdbcType=VARCHAR},
+      license_url = #{licenseUrl,jdbcType=VARCHAR},
+      commission_ratio = #{commissionRatio,jdbcType=DOUBLE},
+      status = #{status,jdbcType=TINYINT},
+      createtime = #{createtime,jdbcType=TIMESTAMP},
+      updatetime = #{updatetime,jdbcType=TIMESTAMP},
+      deleted = #{deleted,jdbcType=BIT}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
 </mapper>

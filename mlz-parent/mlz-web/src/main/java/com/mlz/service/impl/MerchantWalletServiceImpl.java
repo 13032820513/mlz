@@ -1,7 +1,7 @@
 package com.mlz.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.mlz.entity.MerchantWallet;
+import com.mlz.entity.pojo.MerchantWallet;
 import com.mlz.mapper.MerchantWalletMapper;
 import com.mlz.service.MerchantWalletService;
 import org.springframework.stereotype.Service;

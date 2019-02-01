@@ -1,7 +1,7 @@
 package com.mlz.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.mlz.entity.File;
+import com.mlz.entity.pojo.File;
 import com.mlz.mapper.FileMapper;
 import com.mlz.service.FileService;
 import org.springframework.stereotype.Service;

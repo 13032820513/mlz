@@ -1,7 +1,7 @@
 package com.mlz.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.mlz.entity.Provinces;
+import com.mlz.entity.pojo.Provinces;
 import com.mlz.mapper.ProvincesMapper;
 import com.mlz.service.ProvincesService;
 import org.springframework.stereotype.Service;

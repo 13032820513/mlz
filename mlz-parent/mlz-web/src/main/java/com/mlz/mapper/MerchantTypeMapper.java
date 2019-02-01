@@ -1,6 +1,6 @@
 package com.mlz.mapper;
 
-import com.mlz.entity.MerchantType;
+import com.mlz.entity.pojo.MerchantType;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

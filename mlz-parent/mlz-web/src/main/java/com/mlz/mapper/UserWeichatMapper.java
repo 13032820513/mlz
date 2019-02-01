@@ -1,6 +1,6 @@
 package com.mlz.mapper;
 
-import com.mlz.entity.UserWeichat;
+import com.mlz.entity.pojo.UserWeichat;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

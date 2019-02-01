@@ -1,7 +1,7 @@
 package com.mlz.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.mlz.entity.Order;
+import com.mlz.entity.pojo.Order;
 import com.mlz.mapper.OrderMapper;
 import com.mlz.service.OrderService;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,8 @@
 package com.mlz.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.mlz.entity.Admin;
+import com.mlz.config.security.SysUser;
+import com.mlz.entity.pojo.Admin;
 
 /**
  * <p>
@@ -15,4 +16,6 @@ public interface AdminService extends IService<Admin> {
 
 
     Admin checkPassword(Admin admin);
+
+    SysUser getAdminAndRoleByName(String username);
 }

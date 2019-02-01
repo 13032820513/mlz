@@ -3,7 +3,7 @@ package com.mlz.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.mlz.entity.Admin;
+import com.mlz.entity.pojo.Admin;
 import com.mlz.service.impl.AdminServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
