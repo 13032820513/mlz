@@ -70,7 +70,7 @@
   <sql id="Base_Column_List">
     id, product_id, attribute_id, createtime, updatetime, deleted
   </sql>
-  <select id="selectByExample" parameterType="com.mlz.entity.pojo.ProductAttributeExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.mlz.entity.example.ProductAttributeExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -94,7 +94,7 @@
     delete from jia_product_attribute
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.mlz.entity.pojo.ProductAttributeExample">
+  <delete id="deleteByExample" parameterType="com.mlz.entity.example.ProductAttributeExample">
     delete from jia_product_attribute
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -149,7 +149,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.mlz.entity.pojo.ProductAttributeExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.mlz.entity.example.ProductAttributeExample" resultType="java.lang.Long">
     select count(*) from jia_product_attribute
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />

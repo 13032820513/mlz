@@ -74,7 +74,7 @@
     id, merchant_id, product_id, product_name, last_original_price, last_price, createtime, 
     updatetime, deleted
   </sql>
-  <select id="selectByExample" parameterType="com.mlz.entity.pojo.ProductPriceExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.mlz.entity.example.ProductPriceExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -98,7 +98,7 @@
     delete from jia_product_price
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.mlz.entity.pojo.ProductPriceExample">
+  <delete id="deleteByExample" parameterType="com.mlz.entity.example.ProductPriceExample">
     delete from jia_product_price
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -173,7 +173,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.mlz.entity.pojo.ProductPriceExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.mlz.entity.example.ProductPriceExample" resultType="java.lang.Long">
     select count(*) from jia_product_price
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />

@@ -14,7 +14,7 @@
     <result column="updatetime" jdbcType="TIMESTAMP" property="updatetime" />
     <result column="deleted" jdbcType="BIT" property="deleted" />
   </resultMap>
-  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.mlz.entity.pojo.OperationLogWithBLOBs">
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.mlz.entity.pojo.OperationLog">
     <result column="method" jdbcType="LONGVARCHAR" property="method" />
     <result column="message" jdbcType="LONGVARCHAR" property="message" />
   </resultMap>
@@ -83,7 +83,7 @@
   <sql id="Blob_Column_List">
     method, message
   </sql>
-  <select id="selectByExampleWithBLOBs" parameterType="com.mlz.entity.pojo.OperationLogExample" resultMap="ResultMapWithBLOBs">
+  <select id="selectByExampleWithBLOBs" parameterType="com.mlz.entity.example.OperationLogExample" resultMap="ResultMapWithBLOBs">
     select
     <if test="distinct">
       distinct
@@ -99,7 +99,7 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByExample" parameterType="com.mlz.entity.pojo.OperationLogExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.mlz.entity.example.OperationLogExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -125,13 +125,13 @@
     delete from jia_operation_log
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.mlz.entity.pojo.OperationLogExample">
+  <delete id="deleteByExample" parameterType="com.mlz.entity.example.OperationLogExample">
     delete from jia_operation_log
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.mlz.entity.pojo.OperationLogWithBLOBs">
+  <insert id="insert" parameterType="com.mlz.entity.pojo.OperationLog">
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
       SELECT LAST_INSERT_ID()
     </selectKey>
@@ -146,7 +146,7 @@
       #{deleted,jdbcType=BIT}, #{method,jdbcType=LONGVARCHAR}, #{message,jdbcType=LONGVARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.mlz.entity.pojo.OperationLogWithBLOBs">
+  <insert id="insertSelective" parameterType="com.mlz.entity.pojo.OperationLog">
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
       SELECT LAST_INSERT_ID()
     </selectKey>
@@ -228,7 +228,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.mlz.entity.pojo.OperationLogExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.mlz.entity.example.OperationLogExample" resultType="java.lang.Long">
     select count(*) from jia_operation_log
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -317,7 +317,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.mlz.entity.pojo.OperationLogWithBLOBs">
+  <update id="updateByPrimaryKeySelective" parameterType="com.mlz.entity.pojo.OperationLog">
     update jia_operation_log
     <set>
       <if test="userId != null">
@@ -359,7 +359,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.mlz.entity.pojo.OperationLogWithBLOBs">
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.mlz.entity.pojo.OperationLog">
     update jia_operation_log
     set user_id = #{userId,jdbcType=INTEGER},
       log_type = #{logType,jdbcType=VARCHAR},

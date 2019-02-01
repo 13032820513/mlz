@@ -81,7 +81,7 @@
     id, weichat_id, name, sex, phone, password, is_web_user, balance, province_city_area, 
     province_city_name, address, is_invite, status, createtime, updatetime, deleted
   </sql>
-  <select id="selectByExample" parameterType="com.mlz.entity.pojo.UserExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.mlz.entity.example.UserExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -105,7 +105,7 @@
     delete from jia_user
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.mlz.entity.pojo.UserExample">
+  <delete id="deleteByExample" parameterType="com.mlz.entity.example.UserExample">
     delete from jia_user
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -228,7 +228,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.mlz.entity.pojo.UserExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.mlz.entity.example.UserExample" resultType="java.lang.Long">
     select count(*) from jia_user
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />

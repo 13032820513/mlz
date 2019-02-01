@@ -83,7 +83,7 @@
   <sql id="Blob_Column_List">
     headimgurl
   </sql>
-  <select id="selectByExampleWithBLOBs" parameterType="com.mlz.entity.pojo.UserWeichatExample" resultMap="ResultMapWithBLOBs">
+  <select id="selectByExampleWithBLOBs" parameterType="com.mlz.entity.example.UserWeichatExample" resultMap="ResultMapWithBLOBs">
     select
     <if test="distinct">
       distinct
@@ -99,7 +99,7 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByExample" parameterType="com.mlz.entity.pojo.UserWeichatExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.mlz.entity.example.UserWeichatExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -125,7 +125,7 @@
     delete from jia_user_weichat
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.mlz.entity.pojo.UserWeichatExample">
+  <delete id="deleteByExample" parameterType="com.mlz.entity.example.UserWeichatExample">
     delete from jia_user_weichat
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -228,7 +228,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.mlz.entity.pojo.UserWeichatExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.mlz.entity.example.UserWeichatExample" resultType="java.lang.Long">
     select count(*) from jia_user_weichat
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />

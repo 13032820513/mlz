@@ -70,7 +70,7 @@
   <sql id="Base_Column_List">
     id, key, value, description, createtime, updatetime
   </sql>
-  <select id="selectByExample" parameterType="com.mlz.entity.pojo.ConfigExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.mlz.entity.example.ConfigExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -84,19 +84,19 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" parameterType="com.mlz.entity.pojo.ConfigKey" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" parameterType="com.mlz.entity.pojo.Config" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from jia_config
     where id = #{id,jdbcType=INTEGER}
       and key = #{key,jdbcType=VARCHAR}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="com.mlz.entity.pojo.ConfigKey">
+  <delete id="deleteByPrimaryKey" parameterType="com.mlz.entity.pojo.Config">
     delete from jia_config
     where id = #{id,jdbcType=INTEGER}
       and key = #{key,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="com.mlz.entity.pojo.ConfigExample">
+  <delete id="deleteByExample" parameterType="com.mlz.entity.example.ConfigExample">
     delete from jia_config
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -151,7 +151,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.mlz.entity.pojo.ConfigExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.mlz.entity.example.ConfigExample" resultType="java.lang.Long">
     select count(*) from jia_config
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />

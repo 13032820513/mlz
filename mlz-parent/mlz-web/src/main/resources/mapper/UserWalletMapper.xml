@@ -77,7 +77,7 @@
     id, user_id, merchant_id, lower_user_id, order_id, type, amount_money, income_time, 
     status, createtime, updatetime, deleted
   </sql>
-  <select id="selectByExample" parameterType="com.mlz.entity.pojo.UserWalletExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.mlz.entity.example.UserWalletExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -101,7 +101,7 @@
     delete from jia_user_wallet
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.mlz.entity.pojo.UserWalletExample">
+  <delete id="deleteByExample" parameterType="com.mlz.entity.example.UserWalletExample">
     delete from jia_user_wallet
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -196,7 +196,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.mlz.entity.pojo.UserWalletExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.mlz.entity.example.UserWalletExample" resultType="java.lang.Long">
     select count(*) from jia_user_wallet
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />

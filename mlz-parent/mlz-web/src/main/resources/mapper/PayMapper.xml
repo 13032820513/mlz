@@ -20,7 +20,7 @@
     <result column="updatetime" jdbcType="TIMESTAMP" property="updatetime" />
     <result column="deleted" jdbcType="BIT" property="deleted" />
   </resultMap>
-  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.mlz.entity.pojo.PayWithBLOBs">
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.mlz.entity.pojo.Pay">
     <result column="order_response" jdbcType="LONGVARCHAR" property="orderResponse" />
     <result column="order_callback" jdbcType="LONGVARCHAR" property="orderCallback" />
   </resultMap>
@@ -89,7 +89,7 @@
   <sql id="Blob_Column_List">
     order_response, order_callback
   </sql>
-  <select id="selectByExampleWithBLOBs" parameterType="com.mlz.entity.pojo.PayExample" resultMap="ResultMapWithBLOBs">
+  <select id="selectByExampleWithBLOBs" parameterType="com.mlz.entity.example.PayExample" resultMap="ResultMapWithBLOBs">
     select
     <if test="distinct">
       distinct
@@ -105,7 +105,7 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByExample" parameterType="com.mlz.entity.pojo.PayExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.mlz.entity.example.PayExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -131,13 +131,13 @@
     delete from jia_pay
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.mlz.entity.pojo.PayExample">
+  <delete id="deleteByExample" parameterType="com.mlz.entity.example.PayExample">
     delete from jia_pay
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.mlz.entity.pojo.PayWithBLOBs">
+  <insert id="insert" parameterType="com.mlz.entity.pojo.Pay">
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
       SELECT LAST_INSERT_ID()
     </selectKey>
@@ -156,7 +156,7 @@
       #{deleted,jdbcType=BIT}, #{orderResponse,jdbcType=LONGVARCHAR}, #{orderCallback,jdbcType=LONGVARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.mlz.entity.pojo.PayWithBLOBs">
+  <insert id="insertSelective" parameterType="com.mlz.entity.pojo.Pay">
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
       SELECT LAST_INSERT_ID()
     </selectKey>
@@ -274,7 +274,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.mlz.entity.pojo.PayExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.mlz.entity.example.PayExample" resultType="java.lang.Long">
     select count(*) from jia_pay
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -393,7 +393,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.mlz.entity.pojo.PayWithBLOBs">
+  <update id="updateByPrimaryKeySelective" parameterType="com.mlz.entity.pojo.Pay">
     update jia_pay
     <set>
       <if test="payNo != null">
@@ -453,7 +453,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.mlz.entity.pojo.PayWithBLOBs">
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.mlz.entity.pojo.Pay">
     update jia_pay
     set pay_no = #{payNo,jdbcType=CHAR},
       user_id = #{userId,jdbcType=INTEGER},
