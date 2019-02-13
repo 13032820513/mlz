@@ -2,6 +2,7 @@ package com.mlz.config.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -22,9 +23,18 @@ public class SecurityConf extends WebSecurityConfigurerAdapter {
         return new AdminDetailService();
     }
 
+    @Bean
+    public AuthenticationProvider authenticationProvider() {
+        AuthenticationProvider authenticationProvider = new MyAuthenticationProvider();
+        return authenticationProvider;
+    }
+
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(customerUserService());
+        // 注册自定义验证方法
+        auth.authenticationProvider(authenticationProvider());
 
     }
     @Override
