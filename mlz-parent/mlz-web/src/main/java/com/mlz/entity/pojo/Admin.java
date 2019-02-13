@@ -98,11 +98,16 @@ public class Admin implements Serializable, UserDetails {
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<GrantedAuthority> auths = new ArrayList<>();
         // 添加用户的所有角色  (注册当前用户的角色)  将用户的角色作为权限
-        for (Role role : this.getRoles()) {
+        for (Role role : roles) {
             java.lang.System.out.println("添加用户角色role="+ role.getName());
             auths.add(new SimpleGrantedAuthority(role.getName()));
         }
         return auths;
+    }
+
+    @Override
+    public String getPassword() {
+        return null;
     }
 
     @Override
