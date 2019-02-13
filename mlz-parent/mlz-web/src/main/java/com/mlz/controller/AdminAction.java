@@ -23,25 +23,13 @@ public class AdminAction {
     @Autowired
     private AdminServiceImpl adminService;
     /** 
-    * @Description: 跟路径跳转到登陆页面
-    * @Param: [] 
-    * @return: java.lang.String 
-    * @Author: Mr.Zhu 
-    * @Date: 2019/1/25 
-    */ 
-    @RequestMapping("/")
-    public String login() {
-        return "login" ;
-    }
-
-    /** 
-    * @Description: 用户密码检验和登陆
+    * @Description: 用户密码检验和登陆,验证成功跳转到首页
     * @Param: [admin, model] 
     * @return: java.lang.String 
     * @Author: Mr.Zhu 
     * @Date: 2019/1/25 
     */ 
-    @RequestMapping("/index")
+    @RequestMapping(value = "/index")
     public String index(Admin admin, Model model){
         admin = adminService.checkPassword(admin);
         if (admin == null){

@@ -1,8 +1,8 @@
 package com.mlz.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.mlz.entity.pojo.Admin;
 import com.mlz.entity.example.AdminExample;
+import com.mlz.entity.pojo.Admin;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -37,4 +37,6 @@ public interface AdminMapper extends BaseMapper<Admin> {
     int updateByPrimaryKeySelective(Admin record);
 
     int updateByPrimaryKey(Admin record);
+    // 根据用户名查询用户信息和对应的角色信息，一对多查询
+    Admin selectAdminAndRoleByAccount(String username);
 }

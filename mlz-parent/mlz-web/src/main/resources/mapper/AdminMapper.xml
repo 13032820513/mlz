@@ -318,4 +318,39 @@
       deleted = #{deleted,jdbcType=BIT}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+
+
+
+  <resultMap id="AdminToRolesMap" type="com.mlz.entity.pojo.Admin">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="role_id" jdbcType="INTEGER" property="roleId" />
+    <result column="avatar" jdbcType="VARCHAR" property="avatar" />
+    <result column="account" jdbcType="VARCHAR" property="account" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="salt" jdbcType="VARCHAR" property="salt" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="updatetime" jdbcType="TIMESTAMP" property="updatetime" />
+    <result column="deleted" jdbcType="BIT" property="deleted" />
+    <collection property="roles" ofType="Role">
+        <id column="rid" jdbcType="INTEGER" property="id" />
+        <result column="pid" jdbcType="INTEGER" property="pid" />
+        <result column="weight" jdbcType="INTEGER" property="weight" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="status" jdbcType="TINYINT" property="status" />
+    </collection>
+  </resultMap>
+  <!--   查询出当前用户拥有的所有的角色，包括本角色和子角色  -->
+  <select id="selectAdminAndRoleByAccount" parameterType="java.lang.String" resultMap="AdminToRolesMap">
+    select
+      a.*, r.id rid, r.pid, r.weight, r.name, r.status
+    from jia_admin a, jia_role r
+    where a.account = #{username}
+    AND r.id = a.role_id
+    OR r.pid=a.role_id
+  </select>
+
 </mapper>

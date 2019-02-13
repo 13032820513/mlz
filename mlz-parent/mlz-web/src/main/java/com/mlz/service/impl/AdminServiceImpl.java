@@ -2,7 +2,6 @@ package com.mlz.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.mlz.config.security.SysUser;
 import com.mlz.entity.pojo.Admin;
 import com.mlz.mapper.AdminMapper;
 import com.mlz.service.AdminService;
@@ -43,7 +42,8 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     }
 
     @Override
-    public SysUser getAdminAndRoleByName(String username) {
-        return null;
+    public Admin getAdminAndRoleByName(String username) {
+        Admin admin = adminMapper.selectAdminAndRoleByAccount(username);
+        return admin;
     }
 }
