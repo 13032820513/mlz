@@ -43,7 +43,7 @@ public class SecurityConf extends WebSecurityConfigurerAdapter {
 //        super.configure(http);
         http.authorizeRequests()
                 // 所有用户均可访问的资源
-                .antMatchers("/static/**").permitAll()
+                .antMatchers("/static/**", "/login", "/").permitAll()
                 // ROLE_USER的权限才能访问的资源
 //                .antMatchers("/user/**").hasRole("USER")
                 // 任何尚未匹配的URL只需要验证用户即可访问

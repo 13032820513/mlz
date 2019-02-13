@@ -22,6 +22,9 @@ logging:
     com:
       mlz:
         mapper: debug
+    org:
+      springframework:
+        security: debug
 
 
 server:
