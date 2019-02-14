@@ -38,5 +38,5 @@ public interface AdminMapper extends BaseMapper<Admin> {
 
     int updateByPrimaryKey(Admin record);
     // 根据用户名查询用户信息和对应的角色信息，一对多查询
-    Admin selectAdminAndRoleByAccount(String username);
+    /*Admin selectAdminAndRoleByAccount(String username);*/
 }

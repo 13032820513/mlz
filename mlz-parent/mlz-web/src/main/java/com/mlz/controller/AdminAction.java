@@ -29,9 +29,13 @@ public class AdminAction {
     * @Author: Mr.Zhu 
     * @Date: 2019/1/25 
     */ 
-    @RequestMapping(value = "/index")
+    @RequestMapping(value = "/login")
     public String index(Admin admin, Model model){
-        admin = adminService.checkPassword(admin);
+        try {
+            admin = adminService.checkPassword(admin);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         if (admin == null){
             return "redirect:/";
         }

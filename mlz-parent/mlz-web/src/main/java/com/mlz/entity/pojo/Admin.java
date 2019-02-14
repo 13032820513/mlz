@@ -7,7 +7,6 @@ import lombok.Data;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.List;
 
 /**
  * <p>
@@ -83,8 +82,4 @@ public class Admin implements Serializable {
      * 删除：1-删除、0-未删除
      */
     private Boolean deleted;
-
-    //建立用户与角色的一对多关系
-    private List<Role> roles;
-
 }

@@ -14,8 +14,5 @@ import com.mlz.entity.pojo.Admin;
 public interface AdminService extends IService<Admin> {
 
 
-    Admin checkPassword(Admin admin);
-
-    //根据登录名查询用户信息和角色信息
-    Admin getAdminAndRoleByName(String username);
+    Admin checkPassword(Admin admin) throws Exception;
 }

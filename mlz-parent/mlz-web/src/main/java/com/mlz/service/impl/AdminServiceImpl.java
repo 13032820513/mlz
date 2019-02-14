@@ -31,19 +31,17 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     * @Date: 2019/1/28
     */
     @Override
-    public Admin checkPassword(Admin admin) {
+    public Admin checkPassword(Admin admin) throws Exception {
         String account = admin.getAccount();
         String password = admin.getPassword();
         QueryWrapper<Admin> wrapper = new QueryWrapper<>();
         wrapper.eq("account", account);
-        wrapper.eq("password", Md5Util.getMd5String(password));
         admin = this.getOne(wrapper);
-        return admin == null? null:admin;
-    }
-
-    @Override
-    public Admin getAdminAndRoleByName(String username) {
-        Admin admin = adminMapper.selectAdminAndRoleByAccount(username);
-        return admin;
+        // 进行密码校验
+        if ((Md5Util.getMd5String(password).equals(admin.getPassword()))){
+            return admin;
+        }else {
+            throw new Exception("密码错误！");
+        }
     }
 }

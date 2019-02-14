@@ -1,3 +1,4 @@
+/*
 package com.mlz.config.security;
 
 import com.mlz.entity.pojo.Admin;
@@ -14,12 +15,14 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
+*/
 /**
  * @program: mlz-parent
  * @description: 重新根据用户名查询用户详情的方法
  * @author: Mr.Zhu
  * @create: 2019-02-01 09:26
- **/
+ **//*
+
 public class AdminDetailService implements UserDetailsService {
     @Autowired
     private AdminService adminService;
@@ -39,3 +42,4 @@ public class AdminDetailService implements UserDetailsService {
         return new User(admin.getAccount(), admin.getPassword(), auths);
     }
 }
+*/
