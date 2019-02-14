@@ -4,7 +4,7 @@ spring:
   profiles:
     active: dev
   datasource:
-    url: jdbc:mysql://localhost:3306/jiaju_shop?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/jiaju_shop?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC&useSSL=false
     username: root
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver

@@ -1,10 +1,13 @@
 package com.mlz.controller;
 
 
+import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.mlz.entity.pojo.Admin;
 import com.mlz.service.impl.AdminServiceImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,6 +23,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class AdminAction {
+    protected  static final Logger logger = LoggerFactory.getLogger(AdminAction.class);
     @Autowired
     private AdminServiceImpl adminService;
     /** 
@@ -51,11 +55,11 @@ public class AdminAction {
     * @Date: 2019/1/30
     */
     @RequestMapping("/admin/index")
-    public String adminIndex(Model model){
-        Page<Admin> page = new Page<>();
-        IPage<Admin> admins = adminService.page(page);
+    public String adminIndex(Model model, Admin admin){
+        Page<Admin> page = new Page<>(1,10);
+        IPage<Admin> admins = adminService.selectAdminListPage(page, admin);
         model.addAttribute("admins",admins);
-        System.out.println(admins);
+        logger.info(JSON.toJSONString(admins));
         return "admin/index";
     }
 

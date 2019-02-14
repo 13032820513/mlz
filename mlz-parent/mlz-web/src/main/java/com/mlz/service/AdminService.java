@@ -1,5 +1,7 @@
 package com.mlz.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.mlz.entity.pojo.Admin;
 
@@ -15,4 +17,6 @@ public interface AdminService extends IService<Admin> {
 
 
     Admin checkPassword(Admin admin) throws Exception;
+
+    IPage<Admin> selectAdminListPage(Page<Admin> page, Admin admin);
 }

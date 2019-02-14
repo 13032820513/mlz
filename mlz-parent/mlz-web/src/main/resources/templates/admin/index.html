@@ -34,6 +34,7 @@
                         <th>邮箱</th>
                         <th>状态</th>
                         <th>创建时间</th>
+                        <th>操作</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -45,6 +46,10 @@
                         <td class="center">13032820513@163.com</td>
                         <td class="center">正常</td>
                         <td class="center">2015年12月3日</td>
+                        <td class="center">
+                            <button class="btn btn-primary" type="button"><i class="fa fa-check"></i>&nbsp;修改</button>
+                            <button class="btn btn-danger" type="button"><i class="fa fa-check"></i>&nbsp;删除</button>
+                        </td>
                     </tr>
                     </tbody>
                 </table>
@@ -55,7 +60,17 @@
 </div>
 <script>
     $(document).ready(function () {
-        $(".dataTables-example").dataTable();
+        $(".dataTables-example").dataTable({
+            "iDisplayLength" : 10,//默认每页数量
+            paging: false,
+            "info": false,
+            // "ordering": false,  //禁止排序
+            columnDefs:[{
+                'targets' : [0,1,2,3,4,5,6,7,8,9,10,11],    //除第六，第七两列外，都默认不排序
+                'orderable' : false
+            }],
+        });
+        $("#firstTr").removeClass("sorting_asc");
     });
 
 </script>

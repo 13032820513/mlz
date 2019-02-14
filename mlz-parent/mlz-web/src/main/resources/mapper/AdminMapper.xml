@@ -353,4 +353,11 @@
     OR r.pid=a.role_id
   </select>-->
 
+  <!--<select id="selectAdminListPage" parameterType="Admin" resultType="Admin">
+    select
+      a.*, r.id rid, r.name roleName
+    from jia_admin a
+    LEFT JOIN  jia_role r ON r.id = a.role_id
+  </select>-->
+
 </mapper>

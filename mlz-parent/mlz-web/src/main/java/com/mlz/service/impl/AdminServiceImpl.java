@@ -1,6 +1,8 @@
 package com.mlz.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mlz.entity.pojo.Admin;
 import com.mlz.mapper.AdminMapper;
@@ -43,5 +45,17 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
         }else {
             throw new Exception("密码错误！");
         }
+    }
+    
+    /** 
+    * @Description: 分页查询用户和角色信息
+    * @Param: [page, admin] 
+    * @return: com.baomidou.mybatisplus.core.metadata.IPage<com.mlz.entity.pojo.Admin> 
+    * @Author: Mr.Zhu 
+    * @Date: 2019/2/14 
+    */ 
+    @Override
+    public IPage<Admin> selectAdminListPage(Page<Admin> page, Admin admin) {
+        return page.setRecords(adminMapper.selectAdminListPage(page));
     }
 }

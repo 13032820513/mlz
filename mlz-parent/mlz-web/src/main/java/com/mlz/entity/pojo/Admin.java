@@ -1,12 +1,14 @@
 package com.mlz.entity.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.List;
 
 /**
  * <p>
@@ -82,4 +84,16 @@ public class Admin implements Serializable {
      * 删除：1-删除、0-未删除
      */
     private Boolean deleted;
+
+    /**
+    * 直接角色
+    */
+    @TableField(exist = false)
+    private String  roleName;
+
+    /**
+    * 所有角色，包括子角色
+    */
+    @TableField(exist = false)
+    private List<Role> roles;
 }
