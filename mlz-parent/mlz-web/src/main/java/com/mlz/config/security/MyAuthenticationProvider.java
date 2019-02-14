@@ -1,3 +1,4 @@
+/*
 package com.mlz.config.security;
 
 import com.mlz.util.Md5Util;
@@ -12,12 +13,14 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 
+*/
 /**
  * @program: mlz-parent
  * @description:
  * @author: Mr.Zhu
  * @create: 2019-02-13 16:43
- **/
+ **//*
+
 public class MyAuthenticationProvider implements AuthenticationProvider {
     @Autowired
     AdminDetailService adminDetailService;
@@ -46,3 +49,4 @@ public class MyAuthenticationProvider implements AuthenticationProvider {
         return authentication.equals(UsernamePasswordAuthenticationToken.class);
     }
 }
+*/
