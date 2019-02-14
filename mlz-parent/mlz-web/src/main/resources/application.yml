@@ -9,8 +9,9 @@ spring:
   devtools:
     restart:
       enabled: true
-      additional-paths: resources/**,static/**,templates/**
       exclude: data/**
+  resources:
+    static-locations: classpath:/static/,classpath:/templates/
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Mapper.xml
   type-aliases-package: com.mlz.entity
@@ -25,7 +26,6 @@ logging:
     org:
       springframework:
         security: info
-
 
 server:
   servlet:

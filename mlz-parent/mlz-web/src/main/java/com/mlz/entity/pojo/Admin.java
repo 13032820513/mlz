@@ -1,17 +1,13 @@
 package com.mlz.entity.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 /**
@@ -24,7 +20,7 @@ import java.util.List;
  */
 @Data
 @TableName("jia_admin")
-public class Admin implements Serializable, UserDetails {
+public class Admin implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -89,49 +85,15 @@ public class Admin implements Serializable, UserDetails {
      */
     private Boolean deleted;
 
+    /**
+    * 直接角色
+    */
+    @TableField(exist = false)
+    private String  roleName;
 
-
-    //建立用户与角色的一对多关系
+    /**
+    * 所有角色，包括子角色
+    */
+    @TableField(exist = false)
     private List<Role> roles;
-
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        List<GrantedAuthority> auths = new ArrayList<>();
-        // 添加用户的所有角色  (注册当前用户的角色)  将用户的角色作为权限
-        for (Role role : roles) {
-            java.lang.System.out.println("添加用户角色role="+ role.getName());
-            auths.add(new SimpleGrantedAuthority(role.getName()));
-        }
-        return auths;
-    }
-
-    @Override
-    public String getPassword() {
-        return null;
-    }
-
-    @Override
-    public String getUsername() {
-        return this.account;
-    }
-
-    @Override
-    public boolean isAccountNonExpired() {
-        return false;
-    }
-
-    @Override
-    public boolean isAccountNonLocked() {
-        return false;
-    }
-
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return false;
-    }
-
-    @Override
-    public boolean isEnabled() {
-        return false;
-    }
 }

@@ -17,7 +17,7 @@ public class WebConf implements WebMvcConfigurer {
     public void addViewControllers(ViewControllerRegistry registry) {
         // 注册访问/,/login专项login.html页面
         registry.addViewController("/").setViewName("login");
-        registry.addViewController("/login").setViewName("login");
+        registry.addViewController("/index/info").setViewName("info");
 
     }
 }

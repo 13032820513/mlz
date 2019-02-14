@@ -322,7 +322,7 @@
 
 
 
-  <resultMap id="AdminToRolesMap" type="com.mlz.entity.pojo.Admin">
+  <!--<resultMap id="AdminToRolesMap" type="com.mlz.entity.pojo.Admin">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="role_id" jdbcType="INTEGER" property="roleId" />
     <result column="avatar" jdbcType="VARCHAR" property="avatar" />
@@ -343,7 +343,7 @@
         <result column="status" jdbcType="TINYINT" property="status" />
     </collection>
   </resultMap>
-  <!--   查询出当前用户拥有的所有的角色，包括本角色和子角色  -->
+  &lt;!&ndash;   查询出当前用户拥有的所有的角色，包括本角色和子角色  &ndash;&gt;
   <select id="selectAdminAndRoleByAccount" parameterType="java.lang.String" resultMap="AdminToRolesMap">
     select
       a.*, r.id rid, r.pid, r.weight, r.name, r.status
@@ -351,6 +351,13 @@
     where a.account = #{username}
     AND r.id = a.role_id
     OR r.pid=a.role_id
-  </select>
+  </select>-->
+
+  <!--<select id="selectAdminListPage" parameterType="Admin" resultType="Admin">
+    select
+      a.*, r.id rid, r.name roleName
+    from jia_admin a
+    LEFT JOIN  jia_role r ON r.id = a.role_id
+  </select>-->
 
 </mapper>

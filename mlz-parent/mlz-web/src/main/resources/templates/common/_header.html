@@ -72,7 +72,7 @@
         <button class="roll-nav roll-left J_tabLeft"><i class="fa fa-backward"></i></button>
         <nav class="page-tabs J_menuTabs">
             <div class="page-tabs-content">
-                <a href="javascript:;" class="active J_menuTab" data-id="index_v1.html">首页</a>
+                <a href="javascript:;" class="active J_menuTab" data-id="${ctxPath}/index/info">首页</a>
             </div>
         </nav>
         <button class="roll-nav roll-right J_tabRight"><i class="fa fa-forward"></i></button>
@@ -87,12 +87,15 @@
         </div>
         <a href="${ctxPath}/logout" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i> 退出</a>
     </div>
+
     <!--中间主体内容-->
     <% include("_content.html"){} %>
+
     <!--页脚版权信息-->
     <% include("_footer.html"){} %>
 </div>
 <!--右侧部分结束-->
+
 
 <!--右侧边栏开始   右上角弹框内容-->
 <div id="right-sidebar">
