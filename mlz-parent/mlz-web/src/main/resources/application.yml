@@ -28,11 +28,10 @@ logging:
         mapper: debug
     org:
       springframework:
-        security: debug
+        security: info
 
 server:
   servlet:
     context-path: /
   tomcat:
     uri-encoding: UTF-8
-

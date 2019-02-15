@@ -1,6 +1,7 @@
 /*
 package com.mlz.config.security;
 
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -38,6 +39,7 @@ public class SecurityConf extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.inMemoryAuthentication().withUser("admin").password("123456").roles("ADMIN");
         auth.userDetailsService(customerUserService());
         // 注册自定义验证方法
 //        auth.authenticationProvider(authenticationProvider());
@@ -61,15 +63,15 @@ public class SecurityConf extends WebSecurityConfigurerAdapter {
                 //设置默认登录成功跳转页面,错误回到login界面
                 .defaultSuccessUrl("/index").failureUrl("/login?error").permitAll()
                 .and()
-                //开启cookie保存用户数据
-                .rememberMe()
-                //设置cookie有效期
-                .tokenValiditySeconds(60 * 60 * 24 * 7)
-                //设置cookie的私钥
-                .key("mlz")
+                    //开启cookie保存用户数据
+                    .rememberMe()
+                    //设置cookie有效期
+                    .tokenValiditySeconds(60 * 60 * 24 * 7)
+                    //设置cookie的私钥
+                    .key("mlz")
                 .and()
-                .logout().logoutUrl("/logout")
-                .permitAll();
+                    .logout().logoutUrl("/logout")
+                    .permitAll();
     }
 }
 */
