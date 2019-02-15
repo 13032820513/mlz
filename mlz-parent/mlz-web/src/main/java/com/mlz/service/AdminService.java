@@ -23,7 +23,7 @@ public interface AdminService extends IService<Admin> {
     IPage<Admin> selectAdminListPage(Page<Admin> page, Admin admin);
     
     /** 
-    * @Description: 一对多分页查询用户及响应的权限 
+    * @Description: 一对多分页查询用户及响应的权限
     * @Param: [] 
     * @return: java.util.List<com.mlz.entity.pojo.Admin> 
     * @Author: Mr.Zhu 
