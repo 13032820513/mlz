@@ -2,24 +2,27 @@
 spring:
   profiles:
     active: dev
-  mvc:
-    static-path-pattern: static/**
-    view:
-      prefix: /templates
   devtools:
     restart:
       enabled: true
       exclude: data/**
   resources:
     static-locations: classpath:/static/,classpath:/templates/
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  messages:
+    encoding: UTF-8
+
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Mapper.xml
   type-aliases-package: com.mlz.entity
-
-
 logging:
   file: /runtime/log/mlz.log
   level:
+    root: info
     com:
       mlz:
         mapper: debug
@@ -30,4 +33,6 @@ logging:
 server:
   servlet:
     context-path: /
+  tomcat:
+    uri-encoding: UTF-8
 

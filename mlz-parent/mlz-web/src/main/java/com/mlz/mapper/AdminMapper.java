@@ -39,10 +39,12 @@ public interface AdminMapper extends BaseMapper<Admin> {
     int updateByPrimaryKeySelective(Admin record);
 
     int updateByPrimaryKey(Admin record);
+    
     // 根据用户名查询用户信息和对应的角色信息，一对多查询
-    /*Admin selectAdminAndRoleByAccount(String username);*/
+    List<Admin> findAdminRolesList(Page<Admin> page);
 
     // 分页查询用户
     @Select("select a.*, r.name roleName FROM jia_admin a left join jia_role r on r.id = a.role_id")
     List<Admin> selectAdminListPage(Page<Admin> page);
+
 }

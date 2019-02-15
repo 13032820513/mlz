@@ -13,76 +13,78 @@
 
 
     <!-- 全局css -->
-    <link rel="shortcut icon" href="${staticPath}/images/favicon.ico">
+    <link rel="shortcut icon" href="${ctxPath}/images/favicon.ico">
 
-    <link href="${staticPath}/css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
-    <link href="${staticPath}/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
-    <link href="${staticPath}/css/animate.min.css" rel="stylesheet">
-    <link href="${staticPath}/css/style.min.css?v=4.0.0" rel="stylesheet">
+    <link href="${ctxPath}/css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+    <link href="${ctxPath}/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="${ctxPath}/css/animate.min.css" rel="stylesheet">
+    <link href="${ctxPath}/css/style.min.css?v=4.0.0" rel="stylesheet">
+    <link href="${ctxPath}/css/common.css" rel="stylesheet">
+
 
     <!-- 全局css -->
-    <!--<link rel="shortcut icon" href="${ctxPath}/static/favicon.ico">
-    <link href="${ctxPath}/static/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
-    <link href="${ctxPath}/static/css/font-awesome.css?v=4.4.0" rel="stylesheet">
-    <link href="${ctxPath}/static/css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
-    <link href="${ctxPath}/static/css/plugins/validate/bootstrapValidator.min.css" rel="stylesheet">
-    <link href="${ctxPath}/static/css/animate.css" rel="stylesheet">
-    <link href="${ctxPath}/static/css/style.css?v=4.1.0" rel="stylesheet">
-    <link href="${ctxPath}/static/css/_fstyle.css" rel="stylesheet">
-    <link href="${ctxPath}/static/css/plugins/iCheck/custom.css" rel="stylesheet">
-    <link href="${ctxPath}/static/css/plugins/webuploader/webuploader.css" rel="stylesheet">
-    <link href="${ctxPath}/static/css/plugins/ztree/zTreeStyle.css" rel="stylesheet">
-    <link href="${ctxPath}/static/css/plugins/jquery-treegrid/css/jquery.treegrid.css" rel="stylesheet"/>
-    <link href="${ctxPath}/static/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet"/>-->
-    <!-- <link href="${ctxPath}/static/css/plugins/ztree/demo.css" rel="stylesheet"> -->
+    <!--<link rel="shortcut icon" href="${ctxPath}/favicon.ico">
+    <link href="${ctxPath}/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="${ctxPath}/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="${ctxPath}/css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+    <link href="${ctxPath}/css/plugins/validate/bootstrapValidator.min.css" rel="stylesheet">
+    <link href="${ctxPath}/css/animate.css" rel="stylesheet">
+    <link href="${ctxPath}/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="${ctxPath}/css/_fstyle.css" rel="stylesheet">
+    <link href="${ctxPath}/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="${ctxPath}/css/plugins/webuploader/webuploader.css" rel="stylesheet">
+    <link href="${ctxPath}/css/plugins/ztree/zTreeStyle.css" rel="stylesheet">
+    <link href="${ctxPath}/css/plugins/jquery-treegrid/css/jquery.treegrid.css" rel="stylesheet"/>
+    <link href="${ctxPath}/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet"/>-->
+    <!-- <link href="${ctxPath}/css/plugins/ztree/demo.css" rel="stylesheet"> -->
 </head>
 
 <body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
 <div id="wrapper">
     <!-- 左边个人信息和菜单 -->
-    <% include("common/_sidebar.html"){} %>
+    @include("common/_sidebar.html"){}
 
     <!-- 右边部分的头，中间内容，右上角弹框，页脚版权信息 -->
-    <% include("common/_header.html"){} %>
+    @include("common/_header.html"){}
 
     <!-- 聊天弹窗 -->
-    <% include("common/_chat.html"){} %>
+    @include("common/_chat.html"){}
 
 </div>
 
 
-<script type="text/javascript" src="${staticPath}/js/jquery.min.js?v=2.1.4"></script>
-<script type="text/javascript" src="${staticPath}/js/bootstrap.min.js?v=3.3.5"></script>
-<script type="text/javascript" src="${staticPath}/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-<script type="text/javascript" src="${staticPath}/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-<script type="text/javascript" src="${staticPath}/js/plugins/layer/layer.min.js"></script>
-<script type="text/javascript" src="${staticPath}/js/hplus.min.js?v=4.0.0"></script>
-<script type="text/javascript" src="${staticPath}/js/contabs.min.js"></script>
-<script type="text/javascript" src="${staticPath}/js/plugins/pace/pace.min.js"></script>
+<script type="text/javascript" src="${ctxPath}/js/jquery.min.js?v=2.1.4"></script>
+<script type="text/javascript" src="${ctxPath}/js/bootstrap.min.js?v=3.3.5"></script>
+<script type="text/javascript" src="${ctxPath}/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script type="text/javascript" src="${ctxPath}/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script type="text/javascript" src="${ctxPath}/js/plugins/layer/layer.min.js"></script>
+<script type="text/javascript" src="${ctxPath}/js/hplus.min.js?v=4.0.0"></script>
+<script type="text/javascript" src="${ctxPath}/js/contabs.min.js"></script>
+<script type="text/javascript" src="${ctxPath}/js/plugins/pace/pace.min.js"></script>
 <!-- 全局js -->
-<!--<script type="text/javascript" src="${ctxPath}/static/js/jquery.min.js?v=2.1.4"></script>
-<script type="text/javascript" src="${ctxPath}/static/js/jquery.serializejson.js"></script>
-<script type="text/javascript" src="${ctxPath}/static/js/bootstrap.min.js?v=3.3.6"></script>
-<script type="text/javascript" src="${ctxPath}/static/js/plugins/ztree/jquery.ztree.all.min.js"></script>
-<script type="text/javascript" src="${ctxPath}/static/js/plugins/bootstrap-table/bootstrap-table.min.js"></script>
-<script type="text/javascript" src="${ctxPath}/static/js/plugins/validate/bootstrapValidator.min.js"></script>
-<script type="text/javascript" src="${ctxPath}/static/js/plugins/validate/zh_CN.js"></script>
-<script type="text/javascript" src="${ctxPath}/static/js/plugins/bootstrap-table/bootstrap-table-mobile.min.js"></script>
-<script type="text/javascript" src="${ctxPath}/static/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
-<script type="text/javascript" src="${ctxPath}/static/js/plugins/jquery-treegrid/js/jquery.treegrid.min.js"></script>
-<script type="text/javascript" src="${ctxPath}/static/js/plugins/jquery-treegrid/js/jquery.treegrid.bootstrap3.js"></script>
-<script type="text/javascript" src="${ctxPath}/static/js/plugins/jquery-treegrid/extension/jquery.treegrid.extension.js"></script>
-<script type="text/javascript" src="${ctxPath}/static/js/plugins/layer/layer.min.js"></script>
-<script type="text/javascript" src="${ctxPath}/static/js/plugins/iCheck/icheck.min.js"></script>
-<script type="text/javascript" src="${ctxPath}/static/js/plugins/layer/laydate/laydate.js"></script>
-<script type="text/javascript" src="${ctxPath}/static/js/plugins/webuploader/webuploader.min.js"></script>
-<script type="text/javascript" src="${ctxPath}/static/js/common/ajax-object.js"></script>
-<script type="text/javascript" src="${ctxPath}/static/js/common/bootstrap-table-object.js"></script>
-<script type="text/javascript" src="${ctxPath}/static/js/common/tree-table-object.js"></script>
-<script type="text/javascript" src="${ctxPath}/static/js/common/web-upload-object.js"></script>
-<script type="text/javascript" src="${ctxPath}/static/js/common/ztree-object.js"></script>
-<script type="text/javascript" src="${ctxPath}/static/js/common/Feng.js"></script>
-<script type="text/javascript" src="${ctxPath}/static/js/content.js?v=1.0.0"></script>-->
+<!--<script type="text/javascript" src="${ctxPath}/js/jquery.min.js?v=2.1.4"></script>
+<script type="text/javascript" src="${ctxPath}/js/jquery.serializejson.js"></script>
+<script type="text/javascript" src="${ctxPath}/js/bootstrap.min.js?v=3.3.6"></script>
+<script type="text/javascript" src="${ctxPath}/js/plugins/ztree/jquery.ztree.all.min.js"></script>
+<script type="text/javascript" src="${ctxPath}/js/plugins/bootstrap-table/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="${ctxPath}/js/plugins/validate/bootstrapValidator.min.js"></script>
+<script type="text/javascript" src="${ctxPath}/js/plugins/validate/zh_CN.js"></script>
+<script type="text/javascript" src="${ctxPath}/js/plugins/bootstrap-table/bootstrap-table-mobile.min.js"></script>
+<script type="text/javascript" src="${ctxPath}/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+<script type="text/javascript" src="${ctxPath}/js/plugins/jquery-treegrid/js/jquery.treegrid.min.js"></script>
+<script type="text/javascript" src="${ctxPath}/js/plugins/jquery-treegrid/js/jquery.treegrid.bootstrap3.js"></script>
+<script type="text/javascript" src="${ctxPath}/js/plugins/jquery-treegrid/extension/jquery.treegrid.extension.js"></script>
+<script type="text/javascript" src="${ctxPath}/js/plugins/layer/layer.min.js"></script>
+<script type="text/javascript" src="${ctxPath}/js/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="${ctxPath}/js/plugins/layer/laydate/laydate.js"></script>
+<script type="text/javascript" src="${ctxPath}/js/plugins/webuploader/webuploader.min.js"></script>
+<script type="text/javascript" src="${ctxPath}/js/common/ajax-object.js"></script>
+<script type="text/javascript" src="${ctxPath}/js/common/bootstrap-table-object.js"></script>
+<script type="text/javascript" src="${ctxPath}/js/common/tree-table-object.js"></script>
+<script type="text/javascript" src="${ctxPath}/js/common/web-upload-object.js"></script>
+<script type="text/javascript" src="${ctxPath}/js/common/ztree-object.js"></script>
+<script type="text/javascript" src="${ctxPath}/js/common/Feng.js"></script>
+<script type="text/javascript" src="${ctxPath}/js/content.js?v=1.0.0"></script>-->
 </body>
 
 </html>

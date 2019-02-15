@@ -4,6 +4,7 @@ package com.mlz.controller;
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.mlz.common.utils.ConsoleJsonFormat;
 import com.mlz.entity.pojo.Admin;
 import com.mlz.service.impl.AdminServiceImpl;
 import org.slf4j.Logger;
@@ -57,9 +58,10 @@ public class AdminAction {
     @RequestMapping("/admin/index")
     public String adminIndex(Model model, Admin admin){
         Page<Admin> page = new Page<>(1,10);
+        adminService.selectAdminAndRolePage();
         IPage<Admin> admins = adminService.selectAdminListPage(page, admin);
         model.addAttribute("admins",admins);
-        logger.info(JSON.toJSONString(admins));
+        logger.info(ConsoleJsonFormat.responseFormat(JSON.toJSONString(admins)));
         return "admin/index";
     }
 

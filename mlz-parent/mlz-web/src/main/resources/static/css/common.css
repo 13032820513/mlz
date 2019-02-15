@@ -1,0 +1,7 @@
+/* 表格样式调整 */
+.table tr .center{
+    text-align: center;
+}
+.table tr .btn {
+    margin-bottom: 0;
+}

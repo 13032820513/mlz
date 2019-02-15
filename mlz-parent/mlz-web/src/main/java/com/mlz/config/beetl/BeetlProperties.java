@@ -2,7 +2,6 @@ package com.mlz.config.beetl;
 
 import com.mlz.util.ToolUtil;
 import lombok.Data;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import java.util.Properties;
@@ -31,9 +30,7 @@ public class BeetlProperties {
     private String resourceAutoCheck;
     // 模板文件位置
     private String templatesPath = TEMPLATES_PATH;
-    // 模板根路径
-    @Value("${spring.mvc.view.prefix}")
-    private String prefix;
+
     // 静态资源css js img位置
     private String staticPath = STATIC_PATH;
 

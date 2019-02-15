@@ -1,9 +1,11 @@
 package com.mlz.service.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.mlz.common.utils.ConsoleJsonFormat;
 import com.mlz.entity.pojo.Admin;
 import com.mlz.mapper.AdminMapper;
 import com.mlz.service.AdminService;
@@ -11,6 +13,7 @@ import com.mlz.util.Md5Util;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * <p>
@@ -57,5 +60,13 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     @Override
     public IPage<Admin> selectAdminListPage(Page<Admin> page, Admin admin) {
         return page.setRecords(adminMapper.selectAdminListPage(page));
+    }
+
+    @Override
+    public List<Admin> selectAdminAndRolePage() {
+        Page<Admin> page = new Page<>(1,10);
+        List<Admin> admins = adminMapper.findAdminRolesList(page);
+        System.out.println(ConsoleJsonFormat.responseFormat(JSON.toJSONString(admins)));
+        return admins;
     }
 }
