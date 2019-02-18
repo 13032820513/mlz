@@ -8,9 +8,10 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
-    <groupId>com.mybatis</groupId>
+    <groupId>com.mlz</groupId>
     <artifactId>generator</artifactId>
+    <description>该项目用来生成mybatis，mybatisplus中所需要的mapper接口，mapper.xml，XXExample，Pojo等文件</description>
+
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
         <dependency>
