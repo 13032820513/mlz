@@ -11,6 +11,7 @@ import com.mlz.mapper.AdminMapper;
 import com.mlz.service.AdminService;
 import com.mlz.util.Md5Util;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -23,6 +24,7 @@ import java.util.List;
  * @author ZhuJun
  * @since 2019-01-22
  */
+@Transactional    //事务支持
 @Service
 public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements AdminService {
     @Resource
