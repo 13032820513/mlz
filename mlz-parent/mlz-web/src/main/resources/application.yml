@@ -2,10 +2,6 @@
 spring:
   profiles:
     active: dev
-  devtools:
-    restart:
-      enabled: true
-      exclude: data/**
   resources:
     static-locations: classpath:/static/,classpath:/templates/
   http:
@@ -15,7 +11,10 @@ spring:
       force: true
   messages:
     encoding: UTF-8
-
+beetl:
+  suffix: html
+beetl-beetlsql:
+  dev: true
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Mapper.xml
   type-aliases-package: com.mlz.entity
