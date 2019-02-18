@@ -10,20 +10,26 @@
     <link href="${ctxPath}/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
     <link href="${ctxPath}/css/animate.min.css" rel="stylesheet">
     <link href="${ctxPath}/css/style.min.css?v=4.0.0" rel="stylesheet">
-
+    <!-- Sweet Alert -->
+    <link href="${ctxPath}/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
 
     <!-- Data Tables -->
     <link href="${ctxPath}/css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+
+
+    <!-- 复选框和单选框样式 -->
+    <link href="${ctxPath}/css/plugins/iCheck/custom.css" rel="stylesheet">
+
 
     <link href="${ctxPath}/css/common.css" rel="stylesheet">
 
     <!-- 全局js -->
     <script src="${ctxPath}/js/jquery.min.js?v=2.1.4"></script>
-    <script src="${ctxPath}/js/bootstrap.min.js?v=3.3.5"></script>
-
     <!-- DataTable  -->
     <script src="${ctxPath}/js/plugins/dataTables/jquery.dataTables.js"></script>
     <script src="${ctxPath}/js/plugins/dataTables/dataTables.bootstrap.js"></script>
+
+
 </head>
 <!--  中间大白块  子页面公共部分  -->
 <body class="gray-bg">
@@ -31,4 +37,24 @@
     ${layoutContent}
 </div>
 </body>
+
+<script src="${ctxPath}/js/bootstrap.min.js?v=3.3.5"></script>
+
+
+
+<!-- 模态窗口 -->
+<script src="${ctxPath}/js/content.min.js?v=1.0.0"></script>
+<!-- 表单验证 -->
+<script src="${ctxPath}/js/plugins/validate/jquery.validate.min.js"></script>
+<script src="${ctxPath}/js/plugins/validate/messages_zh.min.js"></script>
+<script src="${ctxPath}/js/extrajs/form-validate.js"></script>
+<!-- Sweet Alert -->
+<script src="${ctxPath}/js/plugins/sweetalert/sweetalert.min.js"></script>
+<!-- 复选框  单选框 -->
+<script src="${ctxPath}/js/plugins/iCheck/icheck.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".i-checks").iCheck({checkboxClass: "icheckbox_square-green", radioClass: "iradio_square-green",})
+    });
+</script>
 </html>

@@ -5,3 +5,18 @@
 .table tr .btn {
     margin-bottom: 0;
 }
+
+/* 模态弹窗样式修正 */
+.form-modal .modal-header{
+    padding: 5px;
+    background-color: #1ab394;
+}
+.form-modal .modal-header .close {
+    margin-top: 5px;
+}
+.form-modal .modal-body{
+    padding: 5px 5px 0 5px;
+}
+.form-modal .modal-footer{
+    text-align: center;
+}
