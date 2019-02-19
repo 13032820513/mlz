@@ -30,7 +30,20 @@ $.validator.setDefaults({
             status: {required: e + "请设置用户状态"}
         }
     }), $("#account").focus(function () {
-        var e = $("#account").val();
+        var account = $("#account").val();
+        var id = $("#id").val();
+        if (id == null || id == ""){//添加表单不存在id
+            $.ajax({
+                type: "GET",
+                url: "/admin/check",
+                data: {account:account},
+                dataType: "json",
+                success: function(data){
+                    console.log(data);
+                }
+
+            });
+        }
         // e && r && !this.value && (this.value = e + "." + r)
         //使用ajax校验用户名是否已经存在
     })
